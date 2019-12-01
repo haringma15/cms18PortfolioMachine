@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// Moves the camera along with Mapsl
 public class CameraFocus : MonoBehaviour
 {
     public GameObject mapsl;

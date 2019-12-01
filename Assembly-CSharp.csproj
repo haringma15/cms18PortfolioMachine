@@ -44,45 +44,39 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\Scripts\BackField.cs" />
-     <Compile Include="Assets\Scripts\Background.cs" />
+  <ItemGroup>     <Compile Include="Assets\Scripts\BackFieldController.cs" />
      <Compile Include="Assets\Scripts\CameraFocus.cs" />
-     <Compile Include="Assets\Scripts\Collidable.cs" />
      <Compile Include="Assets\Scripts\Draggable.cs" />
-     <Compile Include="Assets\Scripts\HighlightChecker.cs" />
+     <Compile Include="Assets\Scripts\HighlightByTrigger.cs" />
      <Compile Include="Assets\Scripts\HighlightOnDrag.cs" />
-     <Compile Include="Assets\Scripts\HighlightOnIsland.cs" />
-     <Compile Include="Assets\Scripts\HighlightOnRegion.cs" />
      <Compile Include="Assets\Scripts\Init.cs" />
      <Compile Include="Assets\Scripts\MapslController.cs" />
-     <Compile Include="Assets\Scripts\OutOfBoundsResetter.cs" />
-     <Compile Include="Assets\Scripts\SceneController.cs" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/nikan/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

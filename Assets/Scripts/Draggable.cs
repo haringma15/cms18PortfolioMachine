@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// Makes an object able to be dragged.
 public class Draggable : MonoBehaviour
 {
     private Vector3 screenPoint;
