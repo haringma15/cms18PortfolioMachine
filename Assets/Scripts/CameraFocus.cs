@@ -11,10 +11,12 @@ public class CameraFocus : MonoBehaviour
     private Vector3 nextPos;
 
     void Update() {
-        movement = mapsl.GetComponent<MapslController>().getMapslMovement();
-        nextPos = transform.position + movement;
+        if (PlayerPrefs.GetInt("zooming") == 0) {
+            movement = mapsl.GetComponent<MapslController>().getMapslMovement();
+            nextPos = transform.position + movement;
 
-        if (nextPos.x < xLimit && nextPos.x > -xLimit && nextPos.z < zLimit && nextPos.z > -zLimit) 
-            transform.position += new Vector3(movement.x / 2, 0, movement.z / 2);
+            if (nextPos.x < xLimit && nextPos.x > -xLimit && nextPos.z < zLimit && nextPos.z > -zLimit) 
+                transform.position += new Vector3(movement.x / 2, movement.y, movement.z / 2);
+        }
     }
 }

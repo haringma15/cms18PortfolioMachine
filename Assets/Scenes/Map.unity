@@ -364,7 +364,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -623,7 +623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &642106173
 Transform:
   m_ObjectHideFlags: 0
@@ -650,6 +650,8 @@ GameObject:
   m_Component:
   - component: {fileID: 710160875}
   - component: {fileID: 710160874}
+  - component: {fileID: 710160876}
+  - component: {fileID: 710160877}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -684,6 +686,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &710160876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710160873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13fc07bb54cba89458209feae05ea361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapsl: {fileID: 1448111225}
+  mainCamera: {fileID: 153337192}
+  zoomDurationInFrames: 300
+--- !u!114 &710160877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710160873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba392f6683fc1f43980b7249c19aad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &711770704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,7 +1573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448111225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1979,7 +2008,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 20, z: 0}
 --- !u!1 &507575367859382806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,7 +2304,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 20, z: 0}
 --- !u!1 &2739665723756868018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,7 +2371,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!4 &2977687941633355026
 Transform:
   m_ObjectHideFlags: 0
@@ -2372,7 +2401,7 @@ GameObject:
   - component: {fileID: 2977687941633355024}
   - component: {fileID: 2977687941633355028}
   m_Layer: 0
-  m_Name: Johanna Lielacher
+  m_Name: JohannaLielacher
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2561,7 +2590,7 @@ GameObject:
   - component: {fileID: 2977687942030781686}
   - component: {fileID: 2977687942030781682}
   m_Layer: 0
-  m_Name: Sofiyan Biadsi
+  m_Name: SofiyanBiadsi
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2639,7 +2668,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!65 &2977687942032403760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2652,7 +2681,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!4 &2977687942032403762
 Transform:
   m_ObjectHideFlags: 0
@@ -2682,7 +2711,7 @@ GameObject:
   - component: {fileID: 2977687942032403760}
   - component: {fileID: 2977687942032403764}
   m_Layer: 0
-  m_Name: Johanna Kirchmaier
+  m_Name: JohannaKirchmaier
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2994,7 +3023,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!4 &2977687942150792109
 Transform:
   m_ObjectHideFlags: 0
@@ -3024,7 +3053,7 @@ GameObject:
   - component: {fileID: 2977687942150792099}
   - component: {fileID: 2977687942150792111}
   m_Layer: 0
-  m_Name: Katharina Kuhn
+  m_Name: KatharinaKuhn
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3196,7 +3225,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!4 &2977687942369115894
 Transform:
   m_ObjectHideFlags: 0
@@ -3227,7 +3256,7 @@ GameObject:
   - component: {fileID: 2977687942369115892}
   - component: {fileID: 2977687942369115896}
   m_Layer: 0
-  m_Name: Martin Haring
+  m_Name: MartinHaring
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3740,6 +3769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2977687943099221443}
+  - component: {fileID: 2977687943099221453}
   m_Layer: 0
   m_Name: Interaction Island
   m_TagString: Untagged
@@ -3747,6 +3777,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2977687943099221453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2977687943099221452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d145e2e40752b648bab7a67b1f75bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  island: {fileID: 642106172}
+  regions: {fileID: 2180436712458893550}
 --- !u!65 &2977687943172743400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3759,7 +3803,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!4 &2977687943172743402
 Transform:
   m_ObjectHideFlags: 0
@@ -3789,7 +3833,7 @@ GameObject:
   - component: {fileID: 2977687943172743400}
   - component: {fileID: 2977687943172743404}
   m_Layer: 0
-  m_Name: Jasmin Schachner
+  m_Name: JasminSchachner
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3905,7 +3949,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!4 &2977687943195710795
 Transform:
   m_ObjectHideFlags: 0
@@ -3943,7 +3987,7 @@ GameObject:
   - component: {fileID: 2977687943195710793}
   - component: {fileID: 2977687943195710805}
   m_Layer: 0
-  m_Name: Daniel Schwarz
+  m_Name: DanielSchwarz
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4021,7 +4065,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!4 &2977687943330766358
 Transform:
   m_ObjectHideFlags: 0
@@ -4051,7 +4095,7 @@ GameObject:
   - component: {fileID: 2977687943330766357}
   - component: {fileID: 2977687943330766360}
   m_Layer: 0
-  m_Name: Carina Coelestin
+  m_Name: CarinaCoelestin
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4100,7 +4144,7 @@ GameObject:
   - component: {fileID: 2977687943384697055}
   - component: {fileID: 2977687943384697051}
   m_Layer: 0
-  m_Name: David Mischak
+  m_Name: DavidMischak
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4178,7 +4222,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!23 &2977687943406696628
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4300,7 +4344,7 @@ GameObject:
   - component: {fileID: 2977687943544858734}
   - component: {fileID: 2977687943544858730}
   m_Layer: 0
-  m_Name: Bettina Poetscher
+  m_Name: BettinaPoetscher
   m_TagString: area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4378,7 +4422,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1, z: 0.7}
-  m_Center: {x: 0, y: 15, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!4 &3529913163681740354
 Transform:
   m_ObjectHideFlags: 0
@@ -4452,7 +4496,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 20, z: 0}
 --- !u!1 &6400544355353745916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,7 +4541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4659342134938644650}
   m_Layer: 0
-  m_Name: Interaction Island Shapes
+  m_Name: InteractionIsland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

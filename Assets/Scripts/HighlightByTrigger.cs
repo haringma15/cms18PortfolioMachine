@@ -22,13 +22,15 @@ public class HighlightByTrigger : MonoBehaviour
     }
 
     void Update() {
-        if (PlayerPrefs.GetString(areaType.ToString()) == areaName && !isHighlighted) {
-            updateColor(highlightColor);
-            isHighlighted = true;
-        }
-        if (PlayerPrefs.GetString(areaType.ToString()) != areaName && isHighlighted) {
-            updateColor(highlightColor * -1);
-            isHighlighted = false;
+        if (PlayerPrefs.GetInt("zooming") == 0){
+            if (PlayerPrefs.GetString(areaType.ToString()) == areaName && !isHighlighted) {
+                updateColor(highlightColor);
+                isHighlighted = true;
+            }
+            if (PlayerPrefs.GetString(areaType.ToString()) != areaName && isHighlighted) {
+                updateColor(highlightColor * -1);
+                isHighlighted = false;
+            }
         }
     }
 
