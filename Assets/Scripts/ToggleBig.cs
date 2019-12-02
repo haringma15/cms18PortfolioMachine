@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 // Toggles activeness of island and region gameobjects.
-public class BigToggle : MonoBehaviour
+public class ToggleBig : MonoBehaviour
 {
     public GameObject island;
     public GameObject regions;

@@ -7,34 +7,42 @@ public class ZoomController : MonoBehaviour
     public int zoomDurationInFrames = 300;
 
     private Vector3 zoomPosition;
-    private Vector3 neededMovement;
+    private Vector3 neededMapslMovement;
+    private Vector3 neededCamMovement;
     private string zoomState = "isles";
     private int zoomDuration;
-    private bool zooming = false;
 
     void Update() {
-        if (zooming) {
+        if (PlayerPrefs.GetInt("zooming") == 1) {
             if (zoomDuration > 0) {
-                mapsl.transform.position += neededMovement;
-                mainCamera.transform.position += neededMovement;
+                mapsl.transform.position += neededMapslMovement;
+                mainCamera.transform.position += neededCamMovement;
                 zoomDuration--;
             } else {
-                zooming = false;
                 PlayerPrefs.SetInt("zooming", 0);
             }
         }
-        if (!zooming && zoomState == "isles" && PlayerPrefs.GetString("island") != "" && PlayerPrefs.GetInt("isMapslDragged") == 0) {
+        if (PlayerPrefs.GetInt("zooming") == 0 && zoomState == "isles" && PlayerPrefs.GetString("island") != "" && PlayerPrefs.GetInt("isMapslDragged") == 0) {
             zoomDuration = zoomDurationInFrames;
             zoomPosition = GetComponent<ZoomStorage>().getZoomPosition(PlayerPrefs.GetString("island"));
-            neededMovement = new Vector3(zoomPosition.x - mapsl.transform.position.x, zoomPosition.y - mapsl.transform.position.y, zoomPosition.z - mapsl.transform.position.z);
-            neededMovement = new Vector3(neededMovement.x / zoomDuration, neededMovement.y / zoomDuration, neededMovement.z / zoomDuration);
-            zooming = true;
+            neededMapslMovement = new Vector3(zoomPosition.x - mapsl.transform.position.x, zoomPosition.y - mapsl.transform.position.y, zoomPosition.z - mapsl.transform.position.z);
+            neededMapslMovement = new Vector3(neededMapslMovement.x / zoomDuration, neededMapslMovement.y / zoomDuration, neededMapslMovement.z / zoomDuration);
+            neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y + 10, zoomPosition.z - mainCamera.transform.position.z);
+            neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
             PlayerPrefs.SetInt("toggleBig", 1);
             PlayerPrefs.SetInt("zooming", 1);
             zoomState = "regions";
         }
-        if (!zooming && zoomState == "regions" && PlayerPrefs.GetString("regions") != "" && PlayerPrefs.GetInt("isMapslDragged") == 0) {
-            zoomState = "spots";
+        if (PlayerPrefs.GetInt("zooming") == 0 && zoomState == "regions" && PlayerPrefs.GetString("region") != "" && PlayerPrefs.GetInt("isMapslDragged") == 0) {
+            zoomDuration = zoomDurationInFrames;
+            zoomPosition = GetComponent<ZoomStorage>().getZoomPosition(PlayerPrefs.GetString("region"));
+            neededMapslMovement = new Vector3(zoomPosition.x - mapsl.transform.position.x, zoomPosition.y - mapsl.transform.position.y, zoomPosition.z - mapsl.transform.position.z);
+            neededMapslMovement = new Vector3(neededMapslMovement.x / zoomDuration, neededMapslMovement.y / zoomDuration, neededMapslMovement.z / zoomDuration);
+            neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y + 10, zoomPosition.z - mainCamera.transform.position.z);
+            neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
+            PlayerPrefs.SetInt("toggleSmall", 1);
+            PlayerPrefs.SetInt("zooming", 1);
+            zoomState = "projects";
         }
     }
 }
