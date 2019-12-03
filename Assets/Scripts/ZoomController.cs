@@ -4,7 +4,7 @@ public class ZoomController : MonoBehaviour
 {
     public GameObject mapsl;
     public GameObject mainCamera;
-    public int zoomDurationInFrames = 300;
+    public int zoomDurationInFrames = 200;
 
     private Vector3 zoomPosition;
     private Vector3 neededMapslMovement;
@@ -44,5 +44,32 @@ public class ZoomController : MonoBehaviour
             PlayerPrefs.SetInt("zooming", 1);
             zoomState = "projects";
         }
+        if (PlayerPrefs.GetInt("zooming") == 0 && zoomState == "projects" && PlayerPrefs.GetInt("zoomOut") != 0) {
+            zoomDuration = zoomDurationInFrames;
+            zoomPosition = GetComponent<ZoomStorage>().getZoomPosition(PlayerPrefs.GetString("island"));
+            neededMapslMovement = new Vector3(zoomPosition.x - mapsl.transform.position.x, zoomPosition.y - mapsl.transform.position.y, zoomPosition.z - mapsl.transform.position.z);
+            neededMapslMovement = new Vector3(neededMapslMovement.x / zoomDuration, neededMapslMovement.y / zoomDuration, neededMapslMovement.z / zoomDuration);
+            neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y + 10, zoomPosition.z - mainCamera.transform.position.z);
+            neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
+            PlayerPrefs.SetInt("zoomOut", 0);
+            PlayerPrefs.SetString("region", "");
+            PlayerPrefs.SetInt("toggleSmall", 1);
+            PlayerPrefs.SetInt("zooming", 1);
+            zoomState = "regions";
+        }
+        if (PlayerPrefs.GetInt("zooming") == 0 && zoomState == "regions" && PlayerPrefs.GetInt("zoomOut") != 0) {
+            zoomDuration = zoomDurationInFrames;
+            zoomPosition = GetComponent<ZoomStorage>().getZoomPosition("Init");
+            neededMapslMovement = new Vector3(zoomPosition.x - mapsl.transform.position.x, zoomPosition.y - mapsl.transform.position.y, zoomPosition.z - mapsl.transform.position.z);
+            neededMapslMovement = new Vector3(neededMapslMovement.x / zoomDuration, neededMapslMovement.y / zoomDuration, neededMapslMovement.z / zoomDuration);
+            neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y + 10, zoomPosition.z - mainCamera.transform.position.z);
+            neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
+            PlayerPrefs.SetInt("zoomOut", 0);
+            PlayerPrefs.SetString("island", "");
+            PlayerPrefs.SetInt("toggleBig", 1);
+            PlayerPrefs.SetInt("zooming", 1);
+            zoomState = "isles";
+        }
+        if (Input.GetKeyUp(KeyCode.Escape)) PlayerPrefs.SetInt("zoomOut", 1);
     }
 }

@@ -7,6 +7,6 @@ public class ToggleUI : MonoBehaviour
 
     void Update(){
         if (PlayerPrefs.GetString("project") != "") UI.SetActive(true);
-        else UI.SetActive(false);
+        else if (PlayerPrefs.GetString("project") == "" && PlayerPrefs.GetInt("destroyProject") == 0) UI.SetActive(false);
     }
 }

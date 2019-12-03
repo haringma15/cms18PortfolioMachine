@@ -727,7 +727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapsl: {fileID: 1448111225}
   mainCamera: {fileID: 153337192}
-  zoomDurationInFrames: 300
+  zoomDurationInFrames: 200
 --- !u!114 &710160877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2256,7 +2256,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1274130977809187957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2739665723756868019}
+        m_MethodName: closeProject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1274130977809187955
 RectTransform:
   m_ObjectHideFlags: 0

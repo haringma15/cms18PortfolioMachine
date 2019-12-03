@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\MapslController.cs" />
      <Compile Include="Assets\Scripts\PortfolioController.cs" />
      <Compile Include="Assets\Scripts\ProjectController.cs" />
+     <Compile Include="Assets\Scripts\ProjectDestroyer.cs" />
      <Compile Include="Assets\Scripts\ToggleBig.cs" />
      <Compile Include="Assets\Scripts\ToggleSmall.cs" />
      <Compile Include="Assets\Scripts\ToggleUI.cs" />
