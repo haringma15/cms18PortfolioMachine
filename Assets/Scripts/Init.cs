@@ -3,12 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Init : MonoBehaviour
 {
-    public string firstSceneName = "Map";
-
-    void Awake() {
-        resetPlayerPrefs();
-        SceneManager.LoadScene(firstSceneName);
-    }
+    void Awake() => resetPlayerPrefs();
 
     private void resetPlayerPrefs(){
         PlayerPrefs.SetInt("isMapslDragged", 0);
