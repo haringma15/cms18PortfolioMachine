@@ -9,40 +9,27 @@ public class Selectable : MonoBehaviour
 
     private string areaName;
     private bool isHighlighted = false;
-
-    void Start() {
-        switch (areaType) {
-            case AreaType.island:
-                areaName = transform.parent.name;
-                break;
-            case AreaType.region:
-                areaName = name;
-                break;
-        }
-    }
+    private bool isEntered = false;
 
     void Update() {
         if (PlayerPrefs.GetInt("zooming") == 0){
-            if (PlayerPrefs.GetString(areaType.ToString()) == areaName && !isHighlighted) {
+            if (isEntered && !isHighlighted) {
                 updateColor(highlightColor);
                 isHighlighted = true;
             }
-            if (PlayerPrefs.GetString(areaType.ToString()) != areaName && isHighlighted) {
+            if (!isEntered && isHighlighted) {
                 updateColor(highlightColor * -1);
                 isHighlighted = false;
+            }
+            if (isEntered && PlayerPrefs.GetInt("isMapslDragged") == 0) {
+                PlayerPrefs.SetString(areaType.ToString(), name);
+                isEntered = false;
             }
         }
     }
 
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.name == "Mapsl") 
-            PlayerPrefs.SetString(areaType.ToString(), areaName);
-    }
-
-    void OnTriggerExit(Collider other) {
-        if (other.gameObject.name == "Mapsl") 
-            PlayerPrefs.SetString(areaType.ToString(), "");
-    }
+    void OnTriggerEnter(Collider other) => isEntered = true;
+    void OnTriggerExit(Collider other) => isEntered = false;
 
     private void updateColor(Color c) => GetComponent<MeshRenderer>().material.color += c;
 }

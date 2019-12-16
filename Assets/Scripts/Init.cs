@@ -5,7 +5,7 @@ public class Init : MonoBehaviour
 {
     void Awake() => resetPlayerPrefs();
 
-    private void resetPlayerPrefs(){
+    private void resetPlayerPrefs() {
         PlayerPrefs.SetInt("isMapslDragged", 0);
         PlayerPrefs.SetInt("toggle", 0);
         PlayerPrefs.SetInt("zooming", 0);
@@ -13,6 +13,5 @@ public class Init : MonoBehaviour
         PlayerPrefs.SetInt("destroyProject", 0);
         PlayerPrefs.SetString("island", "");
         PlayerPrefs.SetString("region", "");
-        PlayerPrefs.SetString("project", "");
     }
 }

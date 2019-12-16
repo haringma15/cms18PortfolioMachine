@@ -7,6 +7,7 @@ public class PortfolioController : MonoBehaviour
 
     private Object[] res;
     private List<Object> projects = new List<Object>();
+    private List<Object> studentProjects = new List<Object>();
     private bool hasProject = false;
 
     void Start() {
@@ -15,19 +16,19 @@ public class PortfolioController : MonoBehaviour
     }
 
     void Update() {
-        if (PlayerPrefs.GetString("project") != "" && !hasProject) {
-            foreach (Object p in projects) 
-                if (PlayerPrefs.GetString("project") == p.name) 
-                    Instantiate(p, project.transform);
+        if (PlayerPrefs.GetString("region") != "" && !hasProject) {
+            foreach (Object p in projects) if (p.name.Contains(PlayerPrefs.GetString("region"))) studentProjects.Add(p);            
+            Instantiate(studentProjects[0], project.transform);
             hasProject = true;
         }
-        if (PlayerPrefs.GetString("project") == "" && hasProject) {
+        if (PlayerPrefs.GetString("region") == "" && hasProject) {
             hasProject = false;
         }
     }
 
     public void closeProject() {
-        PlayerPrefs.SetString("project", "");
+        PlayerPrefs.SetString("region", "");
         PlayerPrefs.SetInt("destroyProject", 1);
+        PlayerPrefs.SetInt("zoomOut", 1);
     } 
 }
