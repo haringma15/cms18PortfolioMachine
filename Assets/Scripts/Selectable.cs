@@ -2,7 +2,7 @@
 
 // Adds color to an area when Mapsl is dragged over it.
 // Place this script on "area"-tagged gameobjects.
-public class HighlightByTrigger : MonoBehaviour
+public class Selectable : MonoBehaviour
 {
     public AreaType areaType;
     public Color highlightColor = Color.yellow;
