@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 // Toggles activeness of island and region gameobjects.
-public class ToggleBig : MonoBehaviour
+public class ActivenessToggle : MonoBehaviour
 {
     public GameObject island;
     public GameObject regions;
@@ -11,10 +11,10 @@ public class ToggleBig : MonoBehaviour
     void Start() => setActiveness();
 
     void Update() {
-        if (PlayerPrefs.GetInt("toggleBig") == 1) {
+        if (PlayerPrefs.GetInt("toggle") == 1) {
             toggleActiveness();
             setActiveness();
-            PlayerPrefs.SetInt("toggleBig", 0);
+            PlayerPrefs.SetInt("toggle", 0);
         }
     }
 

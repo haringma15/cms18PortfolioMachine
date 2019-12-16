@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ActivenessToggle.cs" />
      <Compile Include="Assets\Scripts\BackFieldController.cs" />
      <Compile Include="Assets\Scripts\CameraFocus.cs" />
      <Compile Include="Assets\Scripts\Draggable.cs" />
@@ -55,8 +56,6 @@
      <Compile Include="Assets\Scripts\PortfolioController.cs" />
      <Compile Include="Assets\Scripts\ProjectController.cs" />
      <Compile Include="Assets\Scripts\ProjectDestroyer.cs" />
-     <Compile Include="Assets\Scripts\ToggleBig.cs" />
-     <Compile Include="Assets\Scripts\ToggleSmall.cs" />
      <Compile Include="Assets\Scripts\ToggleUI.cs" />
      <Compile Include="Assets\Scripts\ZoomController.cs" />
      <Compile Include="Assets\Scripts\ZoomStorage.cs" />
