@@ -45,18 +45,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ActivenessToggle.cs" />
-     <Compile Include="Assets\Scripts\CameraFocus.cs" />
-     <Compile Include="Assets\Scripts\Draggable.cs" />
-     <Compile Include="Assets\Scripts\HighlightOnDrag.cs" />
+     <Compile Include="Assets\Scripts\CameraMovement\CameraFocus.cs" />
+     <Compile Include="Assets\Scripts\CameraMovement\MapslController.cs" />
+     <Compile Include="Assets\Scripts\DragAndHighlighting\Draggable.cs" />
+     <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightOnDrag.cs" />
+     <Compile Include="Assets\Scripts\DragAndHighlighting\Selectable.cs" />
      <Compile Include="Assets\Scripts\Init.cs" />
-     <Compile Include="Assets\Scripts\MapslController.cs" />
-     <Compile Include="Assets\Scripts\PortfolioController.cs" />
-     <Compile Include="Assets\Scripts\ProjectDestroyer.cs" />
-     <Compile Include="Assets\Scripts\Selectable.cs" />
-     <Compile Include="Assets\Scripts\ToggleUI.cs" />
-     <Compile Include="Assets\Scripts\ZoomController.cs" />
-     <Compile Include="Assets\Scripts\ZoomStorage.cs" />
+     <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioController.cs" />
+     <Compile Include="Assets\Scripts\PortfolioManagement\ProjectDestroyer.cs" />
+     <Compile Include="Assets\Scripts\Zoom\ActivenessToggle.cs" />
+     <Compile Include="Assets\Scripts\Zoom\ToggleUI.cs" />
+     <Compile Include="Assets\Scripts\Zoom\ZoomController.cs" />
+     <Compile Include="Assets\Scripts\Zoom\ZoomStorage.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
