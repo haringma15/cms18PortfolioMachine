@@ -8,6 +8,7 @@ public class Init : MonoBehaviour
     private void resetPlayerPrefs() {
         PlayerPrefs.SetInt("isMapslDragged", 0);
         PlayerPrefs.SetInt("toggle", 0);
+        PlayerPrefs.SetInt("toggleInit", 0);
         PlayerPrefs.SetInt("zooming", 0);
         PlayerPrefs.SetInt("zoomOut", 0);
         PlayerPrefs.SetInt("destroyProject", 0);

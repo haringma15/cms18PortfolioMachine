@@ -33,6 +33,7 @@ public class ZoomController : MonoBehaviour
             neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
             neededCamRotation = new Vector3(0, 0, 0);
             PlayerPrefs.SetInt("toggle", 1);
+            PlayerPrefs.SetInt("toggleInit", 1);
             PlayerPrefs.SetInt("zooming", 1);
             zoomState = "regions";
         }
@@ -71,6 +72,7 @@ public class ZoomController : MonoBehaviour
             PlayerPrefs.SetInt("zoomOut", 0);
             PlayerPrefs.SetString("island", "");
             PlayerPrefs.SetInt("toggle", 1);
+            PlayerPrefs.SetInt("toggleInit", 1);
             PlayerPrefs.SetInt("zooming", 1);
             zoomState = "isles";
         }
