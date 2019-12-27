@@ -23,6 +23,8 @@ public class Selectable : MonoBehaviour
             }
             if (isEntered && PlayerPrefs.GetInt("isMapslDragged") == 0) {
                 PlayerPrefs.SetString(areaType.ToString(), name);
+                updateColor(highlightColor * -1);
+                isHighlighted = false;
                 isEntered = false;
             }
         }

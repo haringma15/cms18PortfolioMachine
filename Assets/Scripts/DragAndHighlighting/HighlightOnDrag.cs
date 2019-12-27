@@ -7,10 +7,8 @@ public class HighlightOnDrag : MonoBehaviour
     private GameObject[] areasToHighlight;
     private bool isHighlighted = false;
 
-    void Start() {
-        areasToHighlight = GameObject.FindGameObjectsWithTag("area");
-        foreach (var x in areasToHighlight) Debug.Log(x.name);
-    } 
+    void Start() => areasToHighlight = GameObject.FindGameObjectsWithTag("area");
+
     void Update() {
         if (PlayerPrefs.GetInt("isMapslDragged") == 1 && !isHighlighted) {
             foreach (var area in areasToHighlight) changeColor(area, highlightingColor);
