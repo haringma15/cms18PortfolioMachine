@@ -53,6 +53,9 @@
      <Compile Include="Assets\Scripts\Init.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\ProjectDestroyer.cs" />
+     <Compile Include="Assets\Scripts\Printing\FileIOUtility.cs" />
+     <Compile Include="Assets\Scripts\Printing\PrintingTool.cs" />
+     <Compile Include="Assets\Scripts\Printing\Test_PrintingTool.cs" />
      <Compile Include="Assets\Scripts\Zoom\ToggleInit.cs" />
      <Compile Include="Assets\Scripts\Zoom\ToggleIsland.cs" />
      <Compile Include="Assets\Scripts\Zoom\ToggleUI.cs" />
