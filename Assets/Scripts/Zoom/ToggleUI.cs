@@ -6,7 +6,10 @@ public class ToggleUI : MonoBehaviour
     public GameObject UI;
 
     void Update(){
-        if (PlayerPrefs.GetString("region") != "") UI.SetActive(true);
+        if (PlayerPrefs.GetInt("toggleUI") != 0) {
+            UI.SetActive(true);
+            PlayerPrefs.SetInt("toggleUI", 0);
+        }
         else if (PlayerPrefs.GetString("region") == "" && PlayerPrefs.GetInt("destroyProject") == 0) UI.SetActive(false);
     }
 }
