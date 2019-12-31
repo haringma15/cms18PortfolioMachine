@@ -6,8 +6,8 @@ TagManager:
   tags:
   - island
   - region
-  - spot
   - area
+  - project
   layers:
   - Default
   - TransparentFX

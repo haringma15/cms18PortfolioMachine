@@ -6,19 +6,19 @@ public class PortfolioController : MonoBehaviour
     public GameObject project;
 
     private Object[] res;
-    private List<Object> projects = new List<Object>();
-    private List<Object> studentProjects = new List<Object>();
+    private List<Object> portfolios = new List<Object>();
+    private GameObject portfolio;
     private bool hasProject = false;
 
     void Start() {
         res = Resources.LoadAll("");
-        foreach (Object r in res) if (!r.name.Contains("CollabHistory")) projects.Add(r);
+        foreach (Object r in res) if (!r.name.Contains("CollabHistory")) portfolios.Add(r);
     }
 
     void Update() {
         if (PlayerPrefs.GetString("region") != "" && !hasProject) {
-            foreach (Object p in projects) if (p.name.Contains(PlayerPrefs.GetString("region"))) studentProjects.Add(p);            
-            Instantiate(studentProjects[0], project.transform);
+            foreach (Object p in portfolios) if (p.name.Contains(PlayerPrefs.GetString("region"))) portfolio = (GameObject) p;
+            Instantiate(portfolio, project.transform);
             hasProject = true;
         }
         if (PlayerPrefs.GetString("region") == "" && hasProject) {
@@ -31,4 +31,10 @@ public class PortfolioController : MonoBehaviour
         PlayerPrefs.SetInt("destroyProject", 1);
         PlayerPrefs.SetInt("zoomOut", 1);
     } 
+
+    public void increaseActiveProjectIndex() {
+    }
+
+    public void decreaseActiveProjectIndex() {
+    }
 }
