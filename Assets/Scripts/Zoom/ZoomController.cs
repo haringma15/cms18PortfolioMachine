@@ -52,6 +52,7 @@ public class ZoomController : MonoBehaviour
             neededMapslMovement = new Vector3(neededMapslMovement.x / zoomDuration, neededMapslMovement.y / zoomDuration, neededMapslMovement.z / zoomDuration);
             neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y + 10, zoomPosition.z - mainCamera.transform.position.z);
             neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
+            PlayerPrefs.SetInt("toggleUI", 1);
             PlayerPrefs.SetInt("zoomOut", 0);
             PlayerPrefs.SetString("region", "");
             PlayerPrefs.SetInt("zooming", 1);

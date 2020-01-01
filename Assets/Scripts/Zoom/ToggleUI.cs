@@ -5,11 +5,15 @@ public class ToggleUI : MonoBehaviour
 {
     public GameObject UI;
 
+    private bool active = false;
+
+    void Start() => UI.SetActive(active);
+
     void Update(){
         if (PlayerPrefs.GetInt("toggleUI") != 0) {
-            UI.SetActive(true);
+            active = !active;
+            UI.SetActive(active);
             PlayerPrefs.SetInt("toggleUI", 0);
         }
-        else if (PlayerPrefs.GetString("region") == "" && PlayerPrefs.GetInt("destroyProject") == 0) UI.SetActive(false);
     }
 }
