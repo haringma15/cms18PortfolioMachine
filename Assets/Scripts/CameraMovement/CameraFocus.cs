@@ -6,7 +6,6 @@ public class CameraFocus : MonoBehaviour
     public GameObject mapsl;
 
     private Vector3 movement;
-    private Vector3 nextPos;
 
     void Update() {
         if (PlayerPrefs.GetInt("zooming") == 0) {
