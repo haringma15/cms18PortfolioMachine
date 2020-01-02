@@ -11,10 +11,13 @@ public class PortfolioController : MonoBehaviour
 
     private Object[] res;
     private List<Object> portfolios = new List<Object>();
+    private List<Object> projects = new List<Object>();
     private GameObject portfolio;
     private bool hasPortfolio = false;
     private bool movementAllowed = true;
     private float movement;
+    private int activeProjectIndex = 0;
+    private int projectCount;
 
     void Start() {
         res = Resources.LoadAll("");
@@ -24,6 +27,8 @@ public class PortfolioController : MonoBehaviour
     void Update() {
         if (PlayerPrefs.GetString("region") != "" && !hasPortfolio) {
             foreach (Object p in portfolios) if (p.name.Contains(PlayerPrefs.GetString("region"))) portfolio = (GameObject) p;
+            foreach (Transform t in portfolio.GetComponentsInChildren<Transform>()) if (t.gameObject.tag == "project") projects.Add(t.gameObject);
+            projectCount = projects.Count;
             Instantiate(portfolio, project.transform);
             hasPortfolio = true;
         }
@@ -84,10 +89,9 @@ public class PortfolioController : MonoBehaviour
                 float rest = project.transform.localPosition.x % defaultProjectDistance;
                 if (rest == 0) movementAllowed = true;
                 else {
-                    // case < 0 = rest = ~ -1400
-                    if (rest < 0) project.transform.localPosition -= new Vector3(defaultProjectDistance+rest, 0, 0);
-                    // case > 0 = rest = ~ 10
-                    if (rest > 0) project.transform.localPosition -= new Vector3(rest, 0, 0);
+                    float shouldPosX = activeProjectIndex * defaultProjectDistance * -1;
+                    float isPosX = project.transform.localPosition.x;
+                    project.transform.localPosition += new Vector3(shouldPosX - isPosX, 0, 0);
                 }
             }
         }
@@ -96,12 +100,24 @@ public class PortfolioController : MonoBehaviour
     public void closeProject() {
         project.transform.localPosition = Vector3.zero;
         swipeController.gameObject.transform.position = Vector3.zero;
+        activeProjectIndex = 0;
         hasPortfolio = false;
         PlayerPrefs.SetString("region", "");
         PlayerPrefs.SetInt("destroyProject", 1);
         PlayerPrefs.SetInt("zoomOut", 1);
     } 
 
-    public void increaseActiveProjectIndex() => movement += defaultProjectDistance;
-    public void decreaseActiveProjectIndex() => movement -= defaultProjectDistance;
+    public void increaseActiveProjectIndex() {
+        if (activeProjectIndex < projectCount - 1) {
+            activeProjectIndex++;
+            movement += defaultProjectDistance;
+        }
+    }
+
+    public void decreaseActiveProjectIndex() {
+        if (activeProjectIndex > 0) {
+            activeProjectIndex--;
+            movement -= defaultProjectDistance;
+        }
+    }
 }
