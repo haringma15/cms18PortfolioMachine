@@ -98,6 +98,7 @@ public class PortfolioController : MonoBehaviour
     }
 
     public void closeProject() {
+        projects.Clear();
         project.transform.localPosition = Vector3.zero;
         swipeController.gameObject.transform.position = Vector3.zero;
         activeProjectIndex = 0;

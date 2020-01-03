@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6760122726488082348}
   - component: {fileID: 6760122726488082351}
   m_Layer: 0
-  m_Name: Print Scripts
+  m_Name: PrintMe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,5 +58,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c28692aca6168443964f6cac1d37a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: "C:\\Users\\echua\\OneDrive\\\u684C\u9762\\EmptyTest.png"
+  baseFilePath: C:\visitenkarten\
   printingTool: {fileID: 6760122726488082348}

@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 472}
   m_MaxSize: {x: 18006, y: 14022}
   vertical: 0
-  controlID: 89
+  controlID: 157
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -414,9 +414,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 804.3745, y: 388.7365, z: -509.3893}
+    m_Target: {x: 656.53424, y: 220.70096, z: -7.381775}
     speed: 2
-    m_Value: {x: 804.3745, y: 388.7365, z: -509.3893}
+    m_Value: {x: 656.53424, y: 220.70096, z: -7.381775}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -445,13 +445,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.09616148, y: -0.0023921463, z: 0.00023254758, w: -0.99536884}
+    m_Target: {x: -0.06925041, y: -0.011375432, z: 0.0007923821, w: -0.9975414}
     speed: 2
-    m_Value: {x: -0.0961609, y: -0.002392132, z: 0.0002325462, w: -0.9953629}
+    m_Value: {x: -0.069249906, y: -0.011375349, z: 0.00079237635, w: -0.99753416}
   m_Size:
-    m_Target: 301.2979
+    m_Target: 705.9352
     speed: 2
-    m_Value: 301.2979
+    m_Value: 705.9352
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -532,9 +532,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9a310000
-      m_LastClickedID: 12698
-      m_ExpandedIDs: eeedffff40f4ffff76fbffff7c300000903100009a310000a4310000
+      m_SelectedIDs: 4687ffff
+      m_LastClickedID: -30906
+      m_ExpandedIDs: 4087ffff4687ffff5af0ffff4af3ffff76fbffffe4380000683b00007c3c0000863c0000903c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -597,20 +597,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/PortfolioManagement
+    - Assets/Graphics
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/PortfolioManagement
+  - Assets/Graphics
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Lloyd Hohenheim\Documents\unity-projects\cms18PortfolioMachine
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 462e0000
-    m_LastClickedID: 11846
-    m_ExpandedIDs: 00000000c82c0000242f000000ca9a3b
+    m_SelectedIDs: 1e360000
+    m_LastClickedID: 13854
+    m_ExpandedIDs: 00000000c82c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -669,18 +669,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Project
-      m_OriginalName: Project
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14040
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
