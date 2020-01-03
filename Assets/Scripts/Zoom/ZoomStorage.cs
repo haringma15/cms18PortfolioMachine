@@ -9,9 +9,9 @@ public class ZoomStorage : MonoBehaviour
     void Start() => fillZoomPositions();
 
     private void fillZoomPositions() {
-        zoomPositions.Add("Init", new Vector3(0, 20, 0));
-        zoomPositions.Add("InteractionIsland", new Vector3(15.5f, 10, 6));
-        zoomPositions.Add("MartinHaring", new Vector3(6, 0.1f, 11));
+        zoomPositions.Add("Init", new Vector3(0, 0, -20));
+        zoomPositions.Add("InteractionIsland", new Vector3(15.5f, 6, -10));
+        zoomPositions.Add("MartinHaring", new Vector3(6, 11, -0.1f));
     }
 
     public Vector3 getZoomPosition(string zoomKey) => (Vector3)zoomPositions[zoomKey];
