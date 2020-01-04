@@ -60,8 +60,8 @@
      <Compile Include="Assets\Scripts\Printing\FileIOUtility.cs" />
      <Compile Include="Assets\Scripts\Printing\Printer.cs" />
      <Compile Include="Assets\Scripts\Printing\PrintingTool.cs" />
-     <Compile Include="Assets\Scripts\Zoom\ToggleInit.cs" />
      <Compile Include="Assets\Scripts\Zoom\ToggleIsland.cs" />
+     <Compile Include="Assets\Scripts\Zoom\ToggleRegion.cs" />
      <Compile Include="Assets\Scripts\Zoom\ToggleUI.cs" />
      <Compile Include="Assets\Scripts\Zoom\ZoomController.cs" />
      <Compile Include="Assets\Scripts\Zoom\ZoomStorage.cs" />

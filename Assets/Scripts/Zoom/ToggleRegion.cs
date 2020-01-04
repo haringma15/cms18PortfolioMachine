@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
 // Toggles activeness of init region 
-public class ToggleInit : MonoBehaviour
+public class ToggleRegion : MonoBehaviour
 {
-    public GameObject initRegion;
+    public GameObject region;
 
     private bool isActive = false;
 
@@ -18,5 +18,5 @@ public class ToggleInit : MonoBehaviour
     }
 
     private void toggleActiveness() => isActive = !isActive;
-    private void setActiveness() => initRegion.SetActive(isActive);
+    private void setActiveness() => region.SetActive(isActive);
 }
