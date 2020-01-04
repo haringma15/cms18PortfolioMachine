@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 // Adds color to an area when Mapsl is dragged over it.
-// Place this script on "area"-tagged gameobjects.
-public class Selectable : MonoBehaviour
+// Place this script on 2D trigger gameobjects.
+public class HighlightController : MonoBehaviour
 {
     public AreaType areaType;
     public Color highlightColor = Color.yellow;
@@ -30,8 +30,12 @@ public class Selectable : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other) => isEntered = true;
-    void OnTriggerExit(Collider other) => isEntered = false;
+    void OnTriggerEnter2D(Collider2D o) {
+        if (o.gameObject.name == "Mapsl") isEntered = true;
+    } 
+    void OnTriggerExit2D(Collider2D o) {
+        if (o.gameObject.name == "Mapsl") isEntered = false;
+    } 
 
-    private void updateColor(Color c) => GetComponent<MeshRenderer>().material.color += c;
+    private void updateColor(Color c) => GetComponent<SpriteRenderer>().color += c;
 }

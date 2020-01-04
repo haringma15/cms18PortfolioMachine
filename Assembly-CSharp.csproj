@@ -47,11 +47,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMovement\CameraFocus.cs" />
      <Compile Include="Assets\Scripts\CameraMovement\MapslController.cs" />
-     <Compile Include="Assets\Scripts\Drag.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\Draggable.cs" />
+     <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightController.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightOnDrag.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\Selectable.cs" />
-     <Compile Include="Assets\Scripts\Init.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\AreaType.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\Init.cs" />
      <Compile Include="Assets\Scripts\mouseOver.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\ProjectDestroyer.cs" />

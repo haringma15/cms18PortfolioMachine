@@ -20,6 +20,11 @@ public class HighlightOnDrag : MonoBehaviour
         }
     }
 
-    private void changeColor(GameObject go, Color c) => go.GetComponent<MeshRenderer>().material.color += c;
-    
+    private void changeColor(GameObject go, Color c) {
+        try {
+            go.GetComponent<MeshRenderer>().material.color += c;
+        } catch (System.Exception) {
+            go.GetComponent<SpriteRenderer>().color += c;
+        }
+    }
 }

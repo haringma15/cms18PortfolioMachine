@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 
-// Toggles activeness of init island and region 
+// Toggles activeness of init region 
 public class ToggleInit : MonoBehaviour
 {
-    public GameObject island;
-    public GameObject regions;
+    public GameObject initRegion;
 
-    private bool isActive = true;
+    private bool isActive = false;
 
     void Start() => setActiveness();
 
@@ -19,9 +18,5 @@ public class ToggleInit : MonoBehaviour
     }
 
     private void toggleActiveness() => isActive = !isActive;
-
-    private void setActiveness() {
-        island.SetActive(isActive);
-        regions.SetActive(!isActive);
-    }
+    private void setActiveness() => initRegion.SetActive(isActive);
 }
