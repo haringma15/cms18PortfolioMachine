@@ -10,7 +10,7 @@ public class CameraFocus : MonoBehaviour
     void Update() {
         if (PlayerPrefs.GetInt("zooming") == 0) {
             movement = mapsl.GetComponent<MapslController>().getMapslMovement();
-            transform.position += new Vector3(movement.x / 2, movement.y / 2, movement.z / 2);
+            transform.position += new Vector3(movement.x / 2, movement.y / 2, 0);
         }
     }
 }

@@ -31,10 +31,10 @@ public class HighlightController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D o) {
-        if (o.gameObject.name == "Mapsl") isEntered = true;
+        if (o.gameObject.name == "Mapsl" && PlayerPrefs.GetInt("isMapslDragged") == 1) isEntered = true;
     } 
     void OnTriggerExit2D(Collider2D o) {
-        if (o.gameObject.name == "Mapsl") isEntered = false;
+        if (o.gameObject.name == "Mapsl" && PlayerPrefs.GetInt("isMapslDragged") == 1) isEntered = false;
     } 
 
     private void updateColor(Color c) => GetComponent<SpriteRenderer>().color += c;
