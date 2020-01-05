@@ -53,7 +53,6 @@
      <Compile Include="Assets\Scripts\DragAndHighlighting\Selectable.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AreaType.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Init.cs" />
-     <Compile Include="Assets\Scripts\mouseOver.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\ProjectDestroyer.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\SwipeController.cs" />

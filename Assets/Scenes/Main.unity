@@ -2160,7 +2160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapsl: {fileID: 1232119028}
   mainCamera: {fileID: 153337192}
-  zoomDurationInFrames: 200
+  cameraOffset: -10
+  zoomDurationInFrames: 60
 --- !u!114 &710160877
 MonoBehaviour:
   m_ObjectHideFlags: 0
