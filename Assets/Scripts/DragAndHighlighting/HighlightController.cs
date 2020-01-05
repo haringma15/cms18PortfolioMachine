@@ -5,6 +5,7 @@
 public class HighlightController : MonoBehaviour
 {
     public AreaType areaType;
+    public SpriteRenderer areaToHighlight;
     public Color highlightColor = Color.yellow;
 
     private string areaName;
@@ -37,5 +38,5 @@ public class HighlightController : MonoBehaviour
         if (o.gameObject.name == "Mapsl" && PlayerPrefs.GetInt("isMapslDragged") == 1) isEntered = false;
     } 
 
-    private void updateColor(Color c) => GetComponent<SpriteRenderer>().color += c;
+    private void updateColor(Color c) => areaToHighlight.color += c;
 }

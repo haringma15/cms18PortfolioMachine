@@ -7,7 +7,7 @@ public class HighlightOnDrag : MonoBehaviour
     private GameObject[] areasToHighlight;
     private bool isHighlighted = false;
 
-    void Start() => areasToHighlight = GameObject.FindGameObjectsWithTag("area");
+    void Awake() => areasToHighlight = GameObject.FindGameObjectsWithTag("area");
 
     void Update() {
         if (PlayerPrefs.GetInt("isMapslDragged") == 1 && !isHighlighted) {
@@ -20,11 +20,5 @@ public class HighlightOnDrag : MonoBehaviour
         }
     }
 
-    private void changeColor(GameObject go, Color c) {
-        try {
-            go.GetComponent<MeshRenderer>().material.color += c;
-        } catch (System.Exception) {
-            go.GetComponent<SpriteRenderer>().color += c;
-        }
-    }
+    private void changeColor(GameObject go, Color c) => go.GetComponent<SpriteRenderer>().color += c;
 }
