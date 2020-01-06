@@ -3,7 +3,7 @@
 // Toggles activeness of island and region gameobjects: true = overview, false = details
 public class ToggleIsland : MonoBehaviour
 {
-    public string islandName;
+    public IslandType islandName;
     public GameObject island;
     public GameObject regions;
 
@@ -11,7 +11,7 @@ public class ToggleIsland : MonoBehaviour
 
     void Update() {
         if (PlayerPrefs.GetInt("toggle") == 1) {
-            if (PlayerPrefs.GetString("island") == islandName) {
+            if (PlayerPrefs.GetString("island") == islandName.ToString()) {
                 toggleIslandActiveness(false);
                 PlayerPrefs.SetInt("toggle", 0);
             }
