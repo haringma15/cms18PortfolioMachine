@@ -21,9 +21,13 @@ public class ZoomController : MonoBehaviour
                 mainCamera.transform.position += neededCamMovement;
                 zoomDuration--;
             } else {
-                if (PlayerPrefs.GetString("region") != "") PlayerPrefs.SetInt("toggleUI", 1);
-                mapsl.transform.position = zoomPosition;
-                mainCamera.transform.position = zoomPosition + new Vector3(0, 0, cameraOffset);
+                // after zooming, set UI active or adjust mapsl and cam position
+                if (PlayerPrefs.GetString("region") != "") {
+                    PlayerPrefs.SetInt("toggleUI", 1); 
+                } else {
+                    mapsl.transform.position = zoomPosition;
+                    mainCamera.transform.position = zoomPosition + new Vector3(0, 0, cameraOffset);
+                }
                 PlayerPrefs.SetInt("zooming", 0);
             }
         }
@@ -42,13 +46,12 @@ public class ZoomController : MonoBehaviour
             zoomState = "regions";
         }
 
-        // Zoom into region, soon to be redone
+        // Zoom into mapsl
         if (PlayerPrefs.GetInt("zooming") == 0 && zoomState == "regions" && PlayerPrefs.GetString("region") != "" && PlayerPrefs.GetInt("isMapslDragged") == 0) {
             zoomDuration = zoomDurationInFrames;
-            zoomPosition = GetComponent<ZoomStorage>().getZoomPosition(PlayerPrefs.GetString("region"));
-            neededMapslMovement = new Vector3(zoomPosition.x - mapsl.transform.position.x, zoomPosition.y - mapsl.transform.position.y, zoomPosition.z - mapsl.transform.position.z);
-            neededMapslMovement = new Vector3(neededMapslMovement.x / zoomDuration, neededMapslMovement.y / zoomDuration, neededMapslMovement.z / zoomDuration);
-            neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y, zoomPosition.z - mainCamera.transform.position.z + cameraOffset);
+            zoomPosition = mapsl.transform.position;
+            neededMapslMovement = Vector3.zero;
+            neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y - 0.2f, zoomPosition.z - mainCamera.transform.position.z);
             neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
             PlayerPrefs.SetInt("zooming", 1);
             zoomState = "projects";
