@@ -1,27 +1,31 @@
 ﻿using UnityEngine;
 
-// Toggles activeness of island and region gameobjects.
+// Toggles activeness of island and region gameobjects: true = overview, false = details
 public class ToggleIsland : MonoBehaviour
 {
+    public string islandName;
     public GameObject island;
     public GameObject regions;
 
-    private bool isActive = true;
-
-    void Start() => setActiveness();
+    void Start() => toggleIslandActiveness(true);
 
     void Update() {
         if (PlayerPrefs.GetInt("toggle") == 1) {
-            toggleActiveness();
-            setActiveness();
-            PlayerPrefs.SetInt("toggle", 0);
+            if (PlayerPrefs.GetString("island") == islandName) {
+                toggleIslandActiveness(false);
+                PlayerPrefs.SetInt("toggle", 0);
+            }
+            if (PlayerPrefs.GetString("island") == "") {
+                if (!island.activeInHierarchy) {
+                    toggleIslandActiveness(true);
+                    PlayerPrefs.SetInt("toggle", 0);
+                }
+            }
         }
     }
-
-    private void toggleActiveness() => isActive = !isActive;
-
-    private void setActiveness() {
-        island.SetActive(isActive);
-        regions.SetActive(!isActive);
+    
+    private void toggleIslandActiveness(bool islandActive) {
+        island.SetActive(islandActive);
+        regions.SetActive(!islandActive);
     }
 }
