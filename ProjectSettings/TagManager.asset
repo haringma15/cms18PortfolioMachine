@@ -9,6 +9,7 @@ TagManager:
   - area
   - project
   - fx
+  - portfolio
   layers:
   - Default
   - TransparentFX

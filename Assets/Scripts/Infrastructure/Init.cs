@@ -12,7 +12,6 @@ public class Init : MonoBehaviour
         PlayerPrefs.SetInt("toggleUI", 0);
         PlayerPrefs.SetInt("zooming", 0);
         PlayerPrefs.SetInt("zoomOut", 0);
-        PlayerPrefs.SetInt("destroyProject", 0);
         PlayerPrefs.SetString("island", "");
         PlayerPrefs.SetString("region", "");
     }

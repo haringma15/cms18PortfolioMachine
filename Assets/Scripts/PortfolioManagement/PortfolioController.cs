@@ -8,6 +8,7 @@ public class PortfolioController : MonoBehaviour
     public float movementSpeed = 20;
     public SwipeController swipeController;
     public float swipeLimit = 200;
+    public TabletController tabletController;
 
     private Object[] res;
     private List<Object> portfolios = new List<Object>();
@@ -21,15 +22,16 @@ public class PortfolioController : MonoBehaviour
 
     void Start() {
         res = Resources.LoadAll("");
-        foreach (Object r in res) if (!r.name.Contains("CollabHistory")) portfolios.Add(r);
+        foreach (Transform t in project.GetComponentsInChildren<Transform>()) if (t.gameObject.tag == "portfolio") portfolios.Add(t.gameObject);
+        foreach (GameObject p in portfolios) p.SetActive(false);
     }
 
     void Update() {
         if (PlayerPrefs.GetString("region") != "" && !hasPortfolio) {
-            foreach (Object p in portfolios) if (p.name.Contains(PlayerPrefs.GetString("region"))) portfolio = (GameObject) p;
+            foreach (GameObject p in portfolios) if (p.name.Contains(PlayerPrefs.GetString("region"))) portfolio = p;
             foreach (Transform t in portfolio.GetComponentsInChildren<Transform>()) if (t.gameObject.tag == "project") projects.Add(t.gameObject);
             projectCount = projects.Count;
-            Instantiate(portfolio, project.transform);
+            portfolio.SetActive(true);
             hasPortfolio = true;
         }
         if (hasPortfolio) {
@@ -102,10 +104,11 @@ public class PortfolioController : MonoBehaviour
         project.transform.localPosition = Vector3.zero;
         swipeController.gameObject.transform.position = Vector3.zero;
         activeProjectIndex = 0;
+        portfolio.SetActive(false);
         hasPortfolio = false;
         PlayerPrefs.SetString("region", "");
-        PlayerPrefs.SetInt("destroyProject", 1);
         PlayerPrefs.SetInt("zoomOut", 1);
+        tabletController.disableAll();
     } 
 
     public void increaseActiveProjectIndex() {
