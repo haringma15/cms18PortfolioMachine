@@ -51,7 +51,7 @@ public class ZoomController : MonoBehaviour
             zoomDuration = zoomDurationInFrames;
             zoomPosition = mapsl.transform.position;
             neededMapslMovement = Vector3.zero;
-            neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.localPosition.x, zoomPosition.y - mainCamera.transform.localPosition.y - 0.2f, zoomPosition.z - mainCamera.transform.localPosition.z);
+            neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y - 0.2f, zoomPosition.z - mainCamera.transform.position.z);
             neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
             PlayerPrefs.SetInt("zooming", 1);
             zoomState = "projects";
