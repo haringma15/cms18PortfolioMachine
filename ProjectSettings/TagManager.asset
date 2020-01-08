@@ -8,6 +8,7 @@ TagManager:
   - region
   - area
   - project
+  - fx
   layers:
   - Default
   - TransparentFX

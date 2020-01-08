@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CameraMovement\MapslController.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\Draggable.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightController.cs" />
+     <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightFXController.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightOnDrag.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\Selectable.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AreaType.cs" />
