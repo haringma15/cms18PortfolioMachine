@@ -4,16 +4,18 @@ using UnityEngine;
 public class PortfolioController : MonoBehaviour
 {
     public GameObject project;
+    public GameObject projectInteractives;
     public float defaultProjectDistance = 1420;
     public float movementSpeed = 20;
     public SwipeController swipeController;
     public float swipeLimit = 200;
     public TabletController tabletController;
 
-    private Object[] res;
-    private List<Object> portfolios = new List<Object>();
-    private List<Object> projects = new List<Object>();
+    private List<GameObject> portfolios = new List<GameObject>();
+    private List<GameObject> portfolioInteractives = new List<GameObject>();
+    private List<GameObject> projects = new List<GameObject>();
     private GameObject portfolio;
+    private GameObject portfolioElements;
     private bool hasPortfolio = false;
     private bool movementAllowed = true;
     private float movement;
@@ -21,23 +23,27 @@ public class PortfolioController : MonoBehaviour
     private int projectCount;
 
     void Start() {
-        res = Resources.LoadAll("");
         foreach (Transform t in project.GetComponentsInChildren<Transform>()) if (t.gameObject.tag == "portfolio") portfolios.Add(t.gameObject);
+        foreach (Transform t in projectInteractives.GetComponentsInChildren<Transform>()) if (t.gameObject.tag == "portfolio") portfolioInteractives.Add(t.gameObject);
         foreach (GameObject p in portfolios) p.SetActive(false);
+        foreach (GameObject p in portfolioInteractives) p.SetActive(false);
     }
 
     void Update() {
         if (PlayerPrefs.GetString("region") != "" && !hasPortfolio) {
             foreach (GameObject p in portfolios) if (p.name.Contains(PlayerPrefs.GetString("region"))) portfolio = p;
+            foreach (GameObject pi in portfolioInteractives) if (pi.name.Contains(PlayerPrefs.GetString("region"))) portfolioElements = pi;
             foreach (Transform t in portfolio.GetComponentsInChildren<Transform>()) if (t.gameObject.tag == "project") projects.Add(t.gameObject);
             projectCount = projects.Count;
             portfolio.SetActive(true);
+            portfolioElements.SetActive(true);
             hasPortfolio = true;
         }
         if (hasPortfolio) {
             if (movementAllowed) {
                 // swipe
                 project.transform.localPosition += new Vector3(swipeController.getSwipeMovement(), 0, 0);
+                projectInteractives.transform.localPosition += new Vector3(swipeController.getSwipeMovement(), 0, 0);
 
                 // swipe to next
                 if (!swipeController.getDragging() && swipeController.getTotalSwipeMovement() < -swipeLimit) {
@@ -63,12 +69,14 @@ public class PortfolioController : MonoBehaviour
                 // far scroll to next
                 if (movement >= defaultProjectDistance/movementSpeed) {
                     project.transform.localPosition -= new Vector3(defaultProjectDistance/movementSpeed, 0, 0);
+                    projectInteractives.transform.localPosition -= new Vector3(defaultProjectDistance/movementSpeed, 0, 0);
                     movement -= defaultProjectDistance/movementSpeed;
                 }
 
                 // final, near scroll to next
                 if (movement < defaultProjectDistance/movementSpeed && movement != 0) {
                     project.transform.localPosition -= new Vector3(movement, 0, 0);
+                    projectInteractives.transform.localPosition -= new Vector3(movement, 0, 0);
                     movement = 0;
                     swipeController.resetTotalSwipeMovement();
                 }
@@ -77,12 +85,14 @@ public class PortfolioController : MonoBehaviour
                 // far scroll to previous
                 if (movement <= (defaultProjectDistance/movementSpeed)*-1) {
                     project.transform.localPosition += new Vector3(defaultProjectDistance/movementSpeed, 0, 0);
+                    projectInteractives.transform.localPosition += new Vector3(defaultProjectDistance/movementSpeed, 0, 0);
                     movement += defaultProjectDistance/movementSpeed;
                 }
 
                 // final, near scroll to previous
                 if (movement > (defaultProjectDistance/movementSpeed)*-1 && movement != 0) {
                     project.transform.localPosition += new Vector3(-movement, 0, 0);
+                    projectInteractives.transform.localPosition += new Vector3(-movement, 0, 0);
                     movement = 0;
                     swipeController.resetTotalSwipeMovement();
                 }
@@ -91,9 +101,11 @@ public class PortfolioController : MonoBehaviour
                 float rest = project.transform.localPosition.x % defaultProjectDistance;
                 if (rest == 0) movementAllowed = true;
                 else {
-                    float shouldPosX = activeProjectIndex * defaultProjectDistance * -1;
-                    float isPosX = project.transform.localPosition.x;
-                    project.transform.localPosition += new Vector3(shouldPosX - isPosX, 0, 0);
+                    float shouldXPos = activeProjectIndex * defaultProjectDistance * -1;
+                    float isXPos = project.transform.localPosition.x;
+                    float isXPosPI = projectInteractives.transform.localPosition.x;
+                    project.transform.localPosition += new Vector3(shouldXPos - isXPos, 0, 0);
+                    projectInteractives.transform.localPosition += new Vector3(shouldXPos - isXPosPI, 0, 0);
                 }
             }
         }
@@ -102,9 +114,11 @@ public class PortfolioController : MonoBehaviour
     public void closeProject() {
         projects.Clear();
         project.transform.localPosition = Vector3.zero;
+        projectInteractives.transform.localPosition = Vector3.zero;
         swipeController.gameObject.transform.position = Vector3.zero;
         activeProjectIndex = 0;
         portfolio.SetActive(false);
+        portfolioElements.SetActive(false);
         hasPortfolio = false;
         PlayerPrefs.SetString("region", "");
         PlayerPrefs.SetInt("zoomOut", 1);
