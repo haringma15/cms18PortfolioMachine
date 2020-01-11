@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 713, y: 494}
-  m_MaxSize: {x: 18008, y: 14044}
+  m_MinSize: {x: 711, y: 494}
+  m_MaxSize: {x: 18006, y: 14044}
   vertical: 0
-  controlID: 6387
+  controlID: 3451
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 422}
   m_MaxSize: {x: 4002, y: 8022}
   vertical: 1
-  controlID: 6366
+  controlID: 3380
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,9 +194,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -20.73869, y: -0.18653628, z: -10.725359}
+    m_Target: {x: -6.30979, y: 3.1111007, z: -3.0502014}
     speed: 2
-    m_Value: {x: -20.73869, y: -0.18653628, z: -10.725359}
+    m_Value: {x: -6.30979, y: 3.1111007, z: -3.0502014}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -225,13 +225,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.012289465, y: -0.056370206, z: 0.000702285, w: -0.9983556}
+    m_Target: {x: -0.006309359, y: -0.008403124, z: 0.00006377227, w: -0.9999671}
     speed: 2
-    m_Value: {x: -0.012289202, y: -0.056368995, z: 0.0007022699, w: -0.9983342}
+    m_Value: {x: -0.0063092182, y: -0.008402937, z: 0.00006377085, w: -0.9999448}
   m_Size:
-    m_Target: 6.929825
+    m_Target: 32.397163
     speed: 2
-    m_Value: 6.929825
+    m_Value: 32.397163
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 6388
+  controlID: 3406
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -389,10 +389,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 36}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 76fbffff123200007c3400003635000024390000
+      m_ExpandedIDs: 76fbffff56390000303a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -481,20 +481,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Textures/Islands
+    - Assets/Textures/Sky
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Textures/Islands
+  - Assets/Textures/Sky
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Lloyd Hohenheim\Documents\unity-projects\cms18PortfolioMachine
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 242e0000
-    m_LastClickedID: 11812
-    m_ExpandedIDs: 00000000e02c00000a2d0000562d0000242e000040300000c43c0000c63c0000c83c0000ca3c0000cc3c0000ce3c0000d03c000000ca9a3b
+    m_SelectedIDs: 582e0000
+    m_LastClickedID: 11864
+    m_ExpandedIDs: 00000000e02c00000a2d0000562d0000302e000058300000f63c0000f83c0000fa3c0000fc3c0000fe3c0000003d0000023d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,7 +522,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e02c00000a2d0000562d0000242e000040300000c43c0000c63c0000c83c0000ca3c0000cc3c0000ce3c0000d03c000000ca9a3b
+    m_ExpandedIDs: 00000000e02c00000a2d0000562d0000302e000058300000f63c0000f83c0000fa3c0000fc3c0000fe3c0000003d0000023d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -547,8 +547,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 3e390000
-    m_LastClickedInstanceID: 14654
+    m_SelectedInstanceIDs: c0350000
+    m_LastClickedInstanceID: 13760
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 000000007e300000
     m_RenameOverlay:
@@ -640,5 +640,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 14654
+  m_LastInspectedObjectInstanceID: 13760
   m_LastVerticalScrollValue: 0
