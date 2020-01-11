@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 52934
+  controlID: 40758
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1202
     height: 947
-  m_MinSize: {x: 202, y: 444}
-  m_MaxSize: {x: 4002, y: 8044}
+  m_MinSize: {x: 202, y: 422}
+  m_MaxSize: {x: 4002, y: 8022}
   vertical: 1
-  controlID: 52940
+  controlID: 40737
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 52839
+  controlID: 40691
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -414,9 +414,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.9437714, y: -8.20993, z: -4.4384766}
+    m_Target: {x: 0.75488806, y: -1.4718461, z: -5.8231125}
     speed: 2
-    m_Value: {x: 2.9437714, y: -8.20993, z: -4.4384766}
+    m_Value: {x: -0.13317871, y: -0.35849, z: -20.016846}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -437,25 +437,25 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
+      m_Target: 1
       speed: 2
-      m_Value: 0
+      m_Value: 1
     zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.01018926, y: 0.014095668, z: 0.00015095514, w: -0.99986476}
+    m_Target: {x: -0.025805075, y: -0.012898983, z: 0.00033595393, w: -0.999602}
     speed: 2
-    m_Value: {x: 0.010189259, y: 0.014095668, z: 0.00015095514, w: -0.9998647}
+    m_Value: {x: -0.048285108, y: 0.015578236, z: -0.0007503424, w: -0.9987118}
   m_Size:
-    m_Target: 3.9583707
+    m_Target: 33.257523
     speed: 2
-    m_Value: 3.9583707
+    m_Value: 1.4961154
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -531,10 +531,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 396}
-      m_SelectedIDs: 142e0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9af9ffff76fbffff98310000ea310000d23400009a35000030360000b2360000d8360000f4370000d2380000e6380000a0390000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 2854ffff
+      m_LastClickedID: -43992
+      m_ExpandedIDs: 2854ffff965fffff9af9ffff76fbfffff23100003e360000ec360000ec380000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -597,20 +597,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Textures/World
+    - Assets/Prefabs/Mapsl
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Textures/World
+  - Assets/Prefabs/Mapsl
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Lloyd Hohenheim\Documents\unity-projects\cms18PortfolioMachine
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e2e0000
-    m_LastClickedID: 11806
-    m_ExpandedIDs: 00000000e02c0000122d00005c2d00002a300000603c0000623c0000643c0000663c0000683c00006a3c00006c3c000000ca9a3b
+    m_SelectedIDs: b42e0000
+    m_LastClickedID: 11956
+    m_ExpandedIDs: 00000000e02c00000e2d0000582d00002e300000803c0000823c0000843c0000863c0000883c00008a3c00008c3c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -638,7 +638,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e02c0000122d00005c2d00002a300000603c0000623c0000643c0000663c0000683c00006a3c00006c3c000000ca9a3b
+    m_ExpandedIDs: 00000000e02c00000e2d0000582d00002e300000803c0000823c0000843c0000863c0000883c00008a3c00008c3c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
