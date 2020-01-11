@@ -10,7 +10,7 @@ public class ZoomStorage : MonoBehaviour
 
     private void fillZoomPositions() {
         zoomPositions.Add("Init", new Vector3(0, 0, -35));
-        zoomPositions.Add("InteractionIsland", new Vector3(-12, 18, 2));
+        zoomPositions.Add("InteractionIsland", new Vector3(-11.9f, 17.8f, 2));
         zoomPositions.Add("CommunicationIsland", new Vector3(4f, -7.3f, -9));
         zoomPositions.Add("SoundIsland", new Vector3(-20.4f, -1, -10));
         zoomPositions.Add("MediaIsland", new Vector3(22.5f, 7.5f, -2));
