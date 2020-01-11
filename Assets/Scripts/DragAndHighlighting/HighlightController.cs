@@ -15,8 +15,10 @@ public class HighlightController : MonoBehaviour
     void Update() {
         if (PlayerPrefs.GetInt("zooming") == 0){
             if (isEntered && !isHighlighted) {
-                updateColor(highlightColor);
-                isHighlighted = true;
+                if (!(areaType.ToString() == "island" && PlayerPrefs.GetString("island") != "" && name != "Init")) {
+                    updateColor(highlightColor);
+                    isHighlighted = true;
+                }
             }
             if (!isEntered && isHighlighted) {
                 updateColor(highlightColor * -1);
