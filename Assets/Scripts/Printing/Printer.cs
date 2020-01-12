@@ -7,12 +7,9 @@ public class Printer : MonoBehaviour {
 
     public PrintingTool printingTool;
 
-    void Update() {
-        filePath = baseFilePath + PlayerPrefs.GetString("region");
-    }
-
     public void print()
     {
+        filePath = baseFilePath + PlayerPrefs.GetString("region") + ".pdf";
         printingTool.CmdPrintThreaded(filePath);
         printingTool.StartCheckIsPrintingDone();
     }

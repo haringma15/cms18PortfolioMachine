@@ -11,58 +11,43 @@ using System.Linq;
 public class PrintingTool : MonoBehaviour
 {
 
-    public string printerName = "Canon TS8100 series";
+    public string printerName = "SRP-350III";
 
     public float interval_checkIsPrintingDone = 0.2f;
 
     Thread m_thread;
 
-    void OnDisable()
-    {
-        if (m_thread != null)
-            m_thread.Abort();
+    void OnDisable() {
+        if (m_thread != null) m_thread.Abort();
     }
 
-    void OnDestroy()
-    {
-        if (m_thread != null)
-            m_thread.Abort();
+    void OnDestroy() {
+        if (m_thread != null) m_thread.Abort();
     }
 
-    void OnApplicationQuit()
-    {
-        if (m_thread != null)
-            m_thread.Abort();
+    void OnApplicationQuit() {
+        if (m_thread != null) m_thread.Abort();
     }
 
-    public void CmdPrintThreaded(string _filePath)
-    {
-        if (File.Exists(_filePath) == false)
-        {
+    public void CmdPrintThreaded(string _filePath) {
+        if (File.Exists(_filePath) == false) {
             UnityEngine.Debug.LogError("File Not Exist: " + _filePath);
             UnityEngine.Debug.LogError("Printing Not Proceed");
-        }
-        else // File Exists
-        {
-            if (FileIOUtility.IsFileLocked(_filePath) == false)
-            {
+        } else {
+            if (FileIOUtility.IsFileLocked(_filePath) == false) {
                 string fullCommand = "rundll32 C:\\WINDOWS\\system32\\shimgvw.dll,ImageView_PrintTo " + "\"" + _filePath + "\"" + " " + "\"" + printerName + "\"";
                 m_thread = new Thread(delegate () { CmdPrint(fullCommand); });
                 m_thread.IsBackground = false;
                 m_thread.Start();
-            }
-            else // File is locked
-            {
+            } else {
                 UnityEngine.Debug.LogError("File is Locked: " + _filePath);
                 UnityEngine.Debug.LogError("Printing Not Proceed");
             }
         }
     }
 
-    void CmdPrint(string _command)
-    {
-        try
-        {
+    void CmdPrint(string _command) {
+        try {
             Process myProcess = new Process();
             //myProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             myProcess.StartInfo.CreateNoWindow = true;
@@ -72,17 +57,13 @@ public class PrintingTool : MonoBehaviour
             myProcess.EnableRaisingEvents = true;
             myProcess.Start();
             myProcess.WaitForExit();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             UnityEngine.Debug.Log(e);
         }
     }
 
-    int GetPrintJobCount()
-    {
-        try
-        {
+    int GetPrintJobCount() {
+        try {
             Process myProcess = new Process();
             //myProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             myProcess.StartInfo.CreateNoWindow = true;
@@ -95,8 +76,7 @@ public class PrintingTool : MonoBehaviour
 
             // Use a StringBuilder instead of string for better performance
             StringBuilder sb = new StringBuilder();
-            while (!myProcess.HasExited)
-                sb.Append(myProcess.StandardOutput.ReadToEnd());
+            while (!myProcess.HasExited) sb.Append(myProcess.StandardOutput.ReadToEnd());
 
             myProcess.WaitForExit();
 
@@ -121,43 +101,31 @@ public class PrintingTool : MonoBehaviour
             UnityEngine.Debug.Log("Print job counts: " + jobCountString);
             return (int.Parse(jobCountString));
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             UnityEngine.Debug.Log(e);
             return -1;
         }
     }
 
-    public void StartCheckIsPrintingDone()
-    {
-        StartCoroutine(E_KeepCheckingIsPrintingDone());
-    }
+    public void StartCheckIsPrintingDone() => StartCoroutine(E_KeepCheckingIsPrintingDone());
 
     /*
      * If the print job count becomes bigger than 0 and returns back to 0 again, we assume the print job is done.
      * You should adjust your check interval or checking method 
      * because every printer's performance and behavior varies.
     */
-    IEnumerator E_KeepCheckingIsPrintingDone()
-    {
+    IEnumerator E_KeepCheckingIsPrintingDone() {
         bool isPrintDone = false;
         bool hasPrintStarted = false;
 
-        while (isPrintDone == false)
-        {
-            if(hasPrintStarted == false)
-            {
-                if (GetPrintJobCount() > 0)
-                {
+        while (isPrintDone == false) {
+            if(hasPrintStarted == false) {
+                if (GetPrintJobCount() > 0) {
                     hasPrintStarted = true;
                     UnityEngine.Debug.LogWarning("Print has started");
                 }
-            }
-            else
-            {
-                if (GetPrintJobCount() == 0)
-                {
+            } else {
+                if (GetPrintJobCount() == 0) {
                     isPrintDone = true;
                     UnityEngine.Debug.LogWarning("Print job is done.");
                 }
@@ -169,4 +137,3 @@ public class PrintingTool : MonoBehaviour
     }
 
 }
-

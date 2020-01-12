@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9cf91bf7ad9fb43a3a5d583f58b659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  printerName: RICOH SPC360
+  printerName: SRP-350III
   interval_checkIsPrintingDone: 0.2
 --- !u!114 &6760122726488082351
 MonoBehaviour:
