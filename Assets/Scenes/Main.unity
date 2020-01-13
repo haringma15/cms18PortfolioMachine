@@ -9323,6 +9323,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 597426f89447e5f4eb85c6b10bffa8d6, type: 3}
+--- !u!1 &707581126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1379543726345122506, guid: 597426f89447e5f4eb85c6b10bffa8d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 707581125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &710160873
 GameObject:
   m_ObjectHideFlags: 0
@@ -9337,6 +9343,7 @@ GameObject:
   - component: {fileID: 710160877}
   - component: {fileID: 710160878}
   - component: {fileID: 710160879}
+  - component: {fileID: 710160880}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -9383,6 +9390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapsl: {fileID: 1903567902}
+  mapslHead: {fileID: 707581126}
   mainCamera: {fileID: 153337192}
   cameraOffset: -10
   zoomDurationInFrames: 60
@@ -9423,6 +9431,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465d4cacb69ff81439b731ba16689b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &710160880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710160873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc37394a6f4ccd2429f9fbbba323d6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serialPortName: COM3
+  serialPortBaudRate: 9600
 --- !u!1 &715814795
 GameObject:
   m_ObjectHideFlags: 0
