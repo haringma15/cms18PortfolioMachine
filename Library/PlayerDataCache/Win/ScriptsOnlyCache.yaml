@@ -10,6 +10,8 @@ ScriptsOnlyBuild:
     - Init
     - MapslController
     - PortfolioController
+    - Printer
+    - PrintingTool
     - SceneController
     - SwipeController
     - TabletController
@@ -88,9 +90,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10592}
     - Class: 114
+      Script: {instanceID: 10792}
+    - Class: 114
       Script: {instanceID: 10796}
     - Class: 114
       Script: {instanceID: 10882}
+    - Class: 114
+      Script: {instanceID: 10906}
     - Class: 114
       Script: {instanceID: 10962}
     - Class: 114
@@ -669,4 +675,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/nikan/Documents/unity-builds/18/cms18PortfolioMachine.exe
+  playerPath: C:/Users/Lloyd Hohenheim/Documents/unity-builds/portfoliomachine/cms18PortfolioMachine.exe
