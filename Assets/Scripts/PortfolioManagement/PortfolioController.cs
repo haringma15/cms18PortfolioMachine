@@ -138,4 +138,11 @@ public class PortfolioController : MonoBehaviour
             movement -= defaultProjectDistance;
         }
     }
+
+    public string getIndex() {
+        if (projectCount == 1) return "minmax";
+        else if (activeProjectIndex == 0) return "min";
+        else if (activeProjectIndex == projectCount-1) return "max";
+        else return activeProjectIndex.ToString();
+    }
 }

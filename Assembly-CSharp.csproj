@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\Init.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\IslandType.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\SceneController.cs" />
+     <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioButtonController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\SwipeController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\TabletController.cs" />
