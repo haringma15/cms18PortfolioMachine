@@ -1,3 +1,0 @@
-move "PDFtoPrinter.exe" & "PDF-XChange Viewer Settings.dat" to
-
-C:\visitenkarten\
