@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\CameraMovement\CameraFocus.cs" />
      <Compile Include="Assets\Scripts\CameraMovement\CenterIslandFocus.cs" />
      <Compile Include="Assets\Scripts\CameraMovement\MapslController.cs" />
+     <Compile Include="Assets\Scripts\DragAndHighlighting\BubbleController.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\Draggable.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightController.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightFXController.cs" />

@@ -857,6 +857,7 @@ Transform:
   m_LocalScale: {x: 2, y: 3, z: 1}
   m_Children:
   - {fileID: 1924899438497238695}
+  - {fileID: 4641425784363541378}
   m_Father: {fileID: 1924899438981551005}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1137,3 +1138,54 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 2, z: 0}
   m_Center: {x: 0, y: -0.5, z: 0}
+--- !u!1 &4793082315746633714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4641425784363541378}
+  - component: {fileID: 4869878967421295744}
+  m_Layer: 0
+  m_Name: BubbleController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4641425784363541378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793082315746633714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1924899439033729393}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4869878967421295744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793082315746633714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75fde85a29a647418bfe6a4ef0274a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleParticleSystems:
+  - {fileID: 7643711025910642914, guid: d3a25d26ca8071340adbd067d76ed00f, type: 3}
+  - {fileID: 7643711025910642914, guid: 1daffb2fe7abacc4e88d5c5c37ccf0ee, type: 3}
+  - {fileID: 7643711025910642914, guid: ec7a86b28db390c468297fc47203a22d, type: 3}
+  - {fileID: 7643711025910642914, guid: 626095f82f78a344f982284f8d12e5e9, type: 3}
+  - {fileID: 7643711025910642914, guid: c297d452218a16845a2ccdbf51f4e7cf, type: 3}
+  - {fileID: 7643711025910642914, guid: 2b0c891e5f90f06489abded6fa29d8d4, type: 3}
+  burstTimeInFrames: 100
