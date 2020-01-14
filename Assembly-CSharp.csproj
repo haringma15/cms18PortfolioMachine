@@ -65,6 +65,10 @@
      <Compile Include="Assets\Scripts\Printing\FileIOUtility.cs" />
      <Compile Include="Assets\Scripts\Printing\Printer.cs" />
      <Compile Include="Assets\Scripts\Printing\PrintingTool.cs" />
+     <Compile Include="Assets\Scripts\Sky\CloudController.cs" />
+     <Compile Include="Assets\Scripts\Sky\FishController.cs" />
+     <Compile Include="Assets\Scripts\Sky\SpaceshipController.cs" />
+     <Compile Include="Assets\Scripts\Sky\StarController.cs" />
      <Compile Include="Assets\Scripts\Zoom\ToggleIsland.cs" />
      <Compile Include="Assets\Scripts\Zoom\ToggleRegion.cs" />
      <Compile Include="Assets\Scripts\Zoom\ToggleUI.cs" />
