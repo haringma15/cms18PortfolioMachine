@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8b618b8f57c3e1f44a53c34af66c9534
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bandeins Strange
+  fontNames:
+  - Bandeins Strange
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4fc37d86992881043b889b5b297e839a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

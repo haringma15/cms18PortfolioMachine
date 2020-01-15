@@ -1,18 +1,25 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BubbleController
     - CameraFocus
     - CenterIslandFocus
+    - CloudController
     - Draggable
+    - FishController
     - HighlightController
     - HighlightFXController
     - HighlightOnDrag
     - Init
     - MapslController
+    - PortfolioButtonController
     - PortfolioController
     - Printer
     - PrintingTool
     - SceneController
+    - SerialController
+    - SpaceshipController
+    - StarController
     - SwipeController
     - TabletController
     - ToggleIsland
@@ -20,6 +27,13 @@ ScriptsOnlyBuild:
     - ToggleUI
     - ZoomController
     - ZoomStorage
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TMP_SubMeshUI
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -45,6 +59,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
     - Class: 54
@@ -61,58 +77,86 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 9696}
     - Class: 114
-      Script: {instanceID: 9798}
+      Script: {instanceID: 9820}
     - Class: 114
-      Script: {instanceID: 9824}
+      Script: {instanceID: 9846}
     - Class: 114
-      Script: {instanceID: 9864}
+      Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 9910}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 9998}
+      Script: {instanceID: 10020}
     - Class: 114
-      Script: {instanceID: 10052}
+      Script: {instanceID: 10074}
     - Class: 114
-      Script: {instanceID: 10140}
+      Script: {instanceID: 10106}
     - Class: 114
-      Script: {instanceID: 10200}
+      Script: {instanceID: 10162}
     - Class: 114
-      Script: {instanceID: 10224}
+      Script: {instanceID: 10222}
     - Class: 114
-      Script: {instanceID: 10248}
+      Script: {instanceID: 10246}
     - Class: 114
-      Script: {instanceID: 10432}
+      Script: {instanceID: 10268}
     - Class: 114
-      Script: {instanceID: 10434}
+      Script: {instanceID: 10272}
     - Class: 114
-      Script: {instanceID: 10592}
+      Script: {instanceID: 10292}
     - Class: 114
-      Script: {instanceID: 10792}
+      Script: {instanceID: 10346}
     - Class: 114
-      Script: {instanceID: 10796}
+      Script: {instanceID: 10458}
     - Class: 114
-      Script: {instanceID: 10882}
+      Script: {instanceID: 10460}
     - Class: 114
-      Script: {instanceID: 10906}
+      Script: {instanceID: 10618}
     - Class: 114
-      Script: {instanceID: 10962}
+      Script: {instanceID: 10628}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 10714}
+    - Class: 114
+      Script: {instanceID: 10822}
+    - Class: 114
+      Script: {instanceID: 10826}
+    - Class: 114
+      Script: {instanceID: 10834}
+    - Class: 114
+      Script: {instanceID: 10842}
+    - Class: 114
+      Script: {instanceID: 10850}
+    - Class: 114
+      Script: {instanceID: 10914}
+    - Class: 114
+      Script: {instanceID: 10918}
+    - Class: 114
+      Script: {instanceID: 10940}
+    - Class: 114
+      Script: {instanceID: 10996}
+    - Class: 114
+      Script: {instanceID: 11018}
+    - Class: 114
+      Script: {instanceID: 11038}
     - Class: 114
       Script: {instanceID: 11078}
     - Class: 114
-      Script: {instanceID: 11150}
+      Script: {instanceID: 11114}
     - Class: 114
-      Script: {instanceID: 11154}
+      Script: {instanceID: 11186}
     - Class: 114
-      Script: {instanceID: 11268}
+      Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11394}
+      Script: {instanceID: 11304}
+    - Class: 114
+      Script: {instanceID: 11396}
+    - Class: 114
+      Script: {instanceID: 11430}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -344,6 +388,12 @@ ScriptsOnlyBuild:
     className: ToggleRegion
   - hash:
       serializedVersion: 2
+      Hash: 661bc179125c127e70261c948d9c54cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpaceshipController
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -372,6 +422,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: edd05f1bb2dc07d2553f163ca7a2be9a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BubbleController
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -428,6 +484,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StarController
+  - hash:
+      serializedVersion: 2
       Hash: feb9a5a121d15fa3654d4e50a5233045
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -438,6 +500,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: b8edae05d8591878474b3f64a7daf7b6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PortfolioButtonController
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -476,6 +544,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 9bbf366d4fb17abbb49c3dfa7443ccc9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SerialController
+  - hash:
+      serializedVersion: 2
       Hash: e1300922cc039f41ab46a47f4cb05898
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -506,13 +580,19 @@ ScriptsOnlyBuild:
     className: TabletController
   - hash:
       serializedVersion: 2
+      Hash: f57a21fe42658d433de404d7ee0255c2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FishController
+  - hash:
+      serializedVersion: 2
       Hash: 35b088aa2f96d06552d1fb42e51602df
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PrintingTool
   - hash:
       serializedVersion: 2
-      Hash: 80d947d32829e1a1d8fe8ecd65b16125
+      Hash: 6cc9b3951212560d25c674e271e769d5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ZoomController
@@ -522,6 +602,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 661bc179125c127e70261c948d9c54cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CloudController
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -675,4 +761,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Lloyd Hohenheim/Documents/unity-builds/portfoliomachine/cms18PortfolioMachine.exe
+  playerPath: C:/Users/nikan/Documents/unity-builds/cms18PortfolioMachine.exe
