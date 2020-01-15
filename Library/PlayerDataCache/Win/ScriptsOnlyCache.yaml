@@ -761,4 +761,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/nikan/Documents/unity-builds/cms18PortfolioMachine.exe
+  playerPath: C:/Users/Lloyd Hohenheim/Documents/unity-builds/portfoliomachine/cms18PortfolioMachine.exe
