@@ -14,8 +14,6 @@ ScriptsOnlyBuild:
     - MapslController
     - PortfolioButtonController
     - PortfolioController
-    - Printer
-    - PrintingTool
     - SceneController
     - SerialController
     - SpaceshipController
@@ -120,8 +118,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 10822}
-    - Class: 114
       Script: {instanceID: 10826}
     - Class: 114
       Script: {instanceID: 10834}
@@ -133,8 +129,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10914}
     - Class: 114
       Script: {instanceID: 10918}
-    - Class: 114
-      Script: {instanceID: 10940}
     - Class: 114
       Script: {instanceID: 10996}
     - Class: 114
@@ -154,9 +148,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11434}
+    - Class: 114
+      Script: {instanceID: 18298}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -178,8 +174,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 328
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -677,6 +671,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TestButtonController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
@@ -710,6 +710,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: b4d34e0d905b186880928c283166e174
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VideoController
   - hash:
       serializedVersion: 2
       Hash: 20eeaeae829475b5e354d1f626c51a2b

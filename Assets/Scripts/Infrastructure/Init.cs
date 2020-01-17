@@ -3,7 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class Init : MonoBehaviour
 {
-    void Awake() => resetPlayerPrefs();
+    void Awake() {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+        resetPlayerPrefs();
+    } 
+
+    void Update() {
+        if (Application.targetFrameRate > 60) Application.targetFrameRate = 60;
+    }
 
     private void resetPlayerPrefs() {
         PlayerPrefs.SetInt("isMapslDragged", 0);
