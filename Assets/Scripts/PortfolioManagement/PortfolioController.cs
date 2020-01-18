@@ -115,7 +115,7 @@ public class PortfolioController : MonoBehaviour
         projects.Clear();
         project.transform.localPosition = Vector3.zero;
         projectInteractives.transform.localPosition = Vector3.zero;
-        swipeController.gameObject.transform.position = Vector3.zero;
+        swipeController.gameObject.transform.localPosition = Vector3.zero;
         activeProjectIndex = 0;
         portfolio.SetActive(false);
         portfolioElements.SetActive(false);

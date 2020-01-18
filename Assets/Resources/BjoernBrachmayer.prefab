@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 1037491963089523339}
   m_Layer: 5
   m_Name: BjoernBrachmayer
-  m_TagString: Untagged
+  m_TagString: portfolio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

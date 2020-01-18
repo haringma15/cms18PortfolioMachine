@@ -409,10 +409,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037491963089523339}
-  - component: {fileID: 942021492388531676}
   m_Layer: 5
   m_Name: NinaLutz
-  m_TagString: Untagged
+  m_TagString: portfolio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,18 +440,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &942021492388531676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6270301142141122296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 751050b792253dc40a1c3dc57d316993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8226918523347817681
 GameObject:
   m_ObjectHideFlags: 0
