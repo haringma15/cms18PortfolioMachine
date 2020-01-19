@@ -9,14 +9,10 @@ public class VideoController : MonoBehaviour
     public RawImage vidView;
 
     private VideoPlayer vid;
-    private AudioSource vidSound;
     private string activeProjectIndex;
     private bool playing = false;
 
-    void Start() {
-        vid = GetComponent<VideoPlayer>();
-        vidSound = GetComponent<AudioSource>();
-    }
+    void Start() => vid = GetComponent<VideoPlayer>();
 
     void Update() {
         activeProjectIndex = portfolioController.getIndex();

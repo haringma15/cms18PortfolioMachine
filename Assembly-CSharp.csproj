@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\SerialController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioButtonController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioController.cs" />
+     <Compile Include="Assets\Scripts\PortfolioManagement\SoundController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\SwipeController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\TabletController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\VideoController.cs" />
