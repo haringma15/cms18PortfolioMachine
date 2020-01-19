@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.67, y: 24}
+  m_AnchoredPosition: {x: -125, y: 24}
   m_SizeDelta: {x: 755, y: 425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2823335789134937748
@@ -262,6 +262,7 @@ MonoBehaviour:
   index: 1
   portfolioController: {fileID: 0}
   vidView: {fileID: 45241780534086092}
+  thumbnail: {fileID: 0}
 --- !u!1 &5000713334194800927
 GameObject:
   m_ObjectHideFlags: 0
