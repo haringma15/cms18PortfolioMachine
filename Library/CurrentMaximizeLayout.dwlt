@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 711, y: 494}
-  m_MaxSize: {x: 18006, y: 14044}
+  m_MinSize: {x: 709, y: 472}
+  m_MaxSize: {x: 18004, y: 14022}
   vertical: 0
-  controlID: 2503
+  controlID: 3226
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 2453
+  controlID: 3106
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -331,10 +331,10 @@ MonoBehaviour:
     y: 0
     width: 491
     height: 947
-  m_MinSize: {x: 234, y: 494}
-  m_MaxSize: {x: 10004, y: 14044}
+  m_MinSize: {x: 230, y: 472}
+  m_MaxSize: {x: 10000, y: 14022}
   vertical: 1
-  controlID: 2378
+  controlID: 3180
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -389,10 +389,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 161}
+      scrollPos: {x: 0, y: 189}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 60f2ffffa4f2ffffe8f2ffff2cf3ffff4cf4ffff5cf4ffff76fbffff36360000e6370000f2380000963a0000aa3a0000f43a0000183d0000
+      m_ExpandedIDs: 08f2ffff4cf2ffffd4f2ffff08f4ffff18f4ffff76fbffff4c360000043800002c38000010390000b43a0000c83a0000163b00003e3d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -435,8 +435,8 @@ MonoBehaviour:
     y: 443
     width: 491
     height: 504
-  m_MinSize: {x: 234, y: 272}
-  m_MaxSize: {x: 10004, y: 10022}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -481,20 +481,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Textures/Portfolio/MD/Groshaeny
+    - Assets/Textures/Portfolio/MD/Voeroes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Textures/Portfolio/MD/Groshaeny
+  - Assets/Textures/Portfolio/MD/Voeroes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Lloyd Hohenheim\Documents\unity-projects\cms18PortfolioMachine
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 139}
-    m_SelectedIDs: 20410000
-    m_LastClickedID: 16672
-    m_ExpandedIDs: 000000005c2d0000a82d0000222e00009e2e0000e42e00000e2f00003a300000b63100004e330000a0340000043500000a4100000c4100000e4100001041000012410000144100001641000000ca9a3b
+    scrollPos: {x: 0, y: 179}
+    m_SelectedIDs: 92410000
+    m_LastClickedID: 16786
+    m_ExpandedIDs: 000000005c2d0000a82d0000242e0000a02e0000e62e0000122f000042300000c23100005c330000b63400001a3500007c4100007e410000804100008241000084410000864100008841000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,7 +522,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005c2d0000a82d0000222e00009e2e0000e42e00000e2f00003a300000b63100004e330000a0340000043500000a4100000c4100000e4100001041000012410000144100001641000000ca9a3b
+    m_ExpandedIDs: 000000005c2d0000a82d0000242e0000a02e0000e62e0000122f000042300000c23100005c330000b63400001a3500007c4100007e410000804100008241000084410000864100008841000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -547,9 +547,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 14f2ffff
-    m_LastClickedInstanceID: -3564
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: c4f2ffff
+    m_LastClickedInstanceID: -3388
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 7e300000cc2f000062310000582f000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -640,5 +640,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -3564
+  m_LastInspectedObjectInstanceID: -3388
   m_LastVerticalScrollValue: 0
