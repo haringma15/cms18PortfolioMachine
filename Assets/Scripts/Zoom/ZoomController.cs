@@ -44,6 +44,7 @@ public class ZoomController : MonoBehaviour
             PlayerPrefs.SetInt("toggle", 1);
             PlayerPrefs.SetInt("toggleInit", 1);
             PlayerPrefs.SetInt("zooming", 1);
+            PlayerPrefs.SetInt("playMapslDropSound", 1);
             zoomState = "regions";
         }
 
@@ -55,6 +56,7 @@ public class ZoomController : MonoBehaviour
             neededCamMovement = new Vector3(zoomPosition.x - mainCamera.transform.position.x, zoomPosition.y - mainCamera.transform.position.y, zoomPosition.z - mainCamera.transform.position.z);
             neededCamMovement = new Vector3(neededCamMovement.x / zoomDuration, neededCamMovement.y / zoomDuration, neededCamMovement.z / zoomDuration);
             PlayerPrefs.SetInt("zooming", 1);
+            PlayerPrefs.SetInt("playMapslDropSound", 1);
             zoomState = "projects";
         }
 
@@ -70,6 +72,7 @@ public class ZoomController : MonoBehaviour
             PlayerPrefs.SetInt("zoomOut", 0);
             PlayerPrefs.SetString("region", "");
             PlayerPrefs.SetInt("zooming", 1);
+            PlayerPrefs.SetInt("playMapslDropSound", 1);
             zoomState = "regions";
         }
 
@@ -86,6 +89,7 @@ public class ZoomController : MonoBehaviour
             PlayerPrefs.SetInt("toggle", 1);
             PlayerPrefs.SetInt("toggleInit", 1);
             PlayerPrefs.SetInt("zooming", 1);
+            PlayerPrefs.SetInt("playMapslDropSound", 1);
             zoomState = "isles";
         }
 
@@ -94,6 +98,7 @@ public class ZoomController : MonoBehaviour
             PlayerPrefs.SetString("region", "");
             PlayerPrefs.SetString("island", "Init");
             PlayerPrefs.SetInt("zoomOut", 1);
+            PlayerPrefs.SetInt("playMapslDropSound", 1);
         }
     }
 }

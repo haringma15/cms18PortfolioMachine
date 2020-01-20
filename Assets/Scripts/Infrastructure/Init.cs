@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Init : MonoBehaviour
 {
@@ -15,6 +14,8 @@ public class Init : MonoBehaviour
 
     private void resetPlayerPrefs() {
         PlayerPrefs.SetInt("isMapslDragged", 0);
+
+        // zoom related
         PlayerPrefs.SetInt("toggle", 0);
         PlayerPrefs.SetInt("toggleInit", 0);
         PlayerPrefs.SetInt("toggleUI", 0);
@@ -22,5 +23,10 @@ public class Init : MonoBehaviour
         PlayerPrefs.SetInt("zoomOut", 0);
         PlayerPrefs.SetString("island", "");
         PlayerPrefs.SetString("region", "");
+
+        // sound related
+        PlayerPrefs.SetInt("playMapslPickUpSound", 0);
+        PlayerPrefs.SetInt("playMapslDropSound", 0);
+        PlayerPrefs.SetInt("playAreaHoverSound", 0);
     }
 }

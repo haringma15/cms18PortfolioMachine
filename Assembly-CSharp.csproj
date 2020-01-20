@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\IslandType.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\SceneController.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\SerialController.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\SoundPlayer.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioButtonController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\PortfolioController.cs" />
      <Compile Include="Assets\Scripts\PortfolioManagement\SoundController.cs" />
