@@ -45,7 +45,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scenes\TestButtonController.cs" />
      <Compile Include="Assets\Scripts\CameraMovement\CameraFocus.cs" />
      <Compile Include="Assets\Scripts\CameraMovement\CenterIslandFocus.cs" />
      <Compile Include="Assets\Scripts\CameraMovement\MapslController.cs" />
@@ -54,7 +53,6 @@
      <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightController.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightFXController.cs" />
      <Compile Include="Assets\Scripts\DragAndHighlighting\HighlightOnDrag.cs" />
-     <Compile Include="Assets\Scripts\DragAndHighlighting\Selectable.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AreaType.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Init.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\IslandType.cs" />
@@ -99,31 +97,31 @@
      <None Include="Assets\Textures\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Textures\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/projects/cms18PortfolioMachine/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Lloyd Hohenheim/Documents/unity-projects/cms18PortfolioMachine/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

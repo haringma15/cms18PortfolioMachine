@@ -7,35 +7,24 @@ public class TabletOverlayController : MonoBehaviour
 
     private bool isBackgroundSet;
     
-    void Start() => disableAll();
-
     void Update() {
-        if (PlayerPrefs.GetString("region") != "" && !isBackgroundSet) {
-            switch (PlayerPrefs.GetString("island")) {
-                case "InteractionIsland":
-                    interactionOrMediaOverlay.SetActive(true);
-                    soundOrCommunicationOverlay.SetActive(false);
-                    break;
-                case "SoundIsland":
-                    interactionOrMediaOverlay.SetActive(false);
-                    soundOrCommunicationOverlay.SetActive(true);
-                    break;
-                case "CommunicationIsland":
-                    interactionOrMediaOverlay.SetActive(false);
-                    soundOrCommunicationOverlay.SetActive(true);
-                    break;
-                case "MediaIsland":
-                    interactionOrMediaOverlay.SetActive(true);
-                    soundOrCommunicationOverlay.SetActive(false);
-                    break;
-            }
-            isBackgroundSet = true;
+        switch (PlayerPrefs.GetString("island")) {
+            case "InteractionIsland":
+                if (!interactionOrMediaOverlay.activeInHierarchy) interactionOrMediaOverlay.SetActive(true);
+                if (soundOrCommunicationOverlay.activeInHierarchy) soundOrCommunicationOverlay.SetActive(false);
+                break;
+            case "MediaIsland":
+                if (!interactionOrMediaOverlay.activeInHierarchy) interactionOrMediaOverlay.SetActive(true);
+                if (soundOrCommunicationOverlay.activeInHierarchy) soundOrCommunicationOverlay.SetActive(false);
+                break;
+            case "SoundIsland":
+                if (interactionOrMediaOverlay.activeInHierarchy) interactionOrMediaOverlay.SetActive(false);
+                if (!soundOrCommunicationOverlay.activeInHierarchy) soundOrCommunicationOverlay.SetActive(true);
+                break;
+            case "CommunicationIsland":
+                if (interactionOrMediaOverlay.activeInHierarchy) interactionOrMediaOverlay.SetActive(false);
+                if (!soundOrCommunicationOverlay.activeInHierarchy) soundOrCommunicationOverlay.SetActive(true);
+                break;
         }
-    }
-
-    public void disableAll() {
-        isBackgroundSet = false;
-        interactionOrMediaOverlay.SetActive(false);
-        soundOrCommunicationOverlay.SetActive(false);
     }
 }
