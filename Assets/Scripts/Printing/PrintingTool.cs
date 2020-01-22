@@ -26,6 +26,7 @@ public class PrintingTool : MonoBehaviour
     }
 
     public void CmdPrintThreaded(string _filePath) {
+        PlayerPrefs.SetInt("playButtonClickSound", 1);
         if (File.Exists(_filePath) == false) {
             UnityEngine.Debug.LogError("File Not Exist: " + _filePath);
         } else {

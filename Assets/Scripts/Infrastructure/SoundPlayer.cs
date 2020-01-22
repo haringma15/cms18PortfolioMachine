@@ -2,81 +2,61 @@
 
 public class SoundPlayer : MonoBehaviour
 {
-    public AudioSource pickUpSound;
+    public AudioSource ambientSound;
+    public AudioSource pickUpSound1;
+    public AudioSource pickUpSound2;
     public AudioSource dropSound;
-    public AudioSource hoverSound;
-    public AudioSource ambientOverviewSound;
-    public AudioSource ambientIDSound;
-    public AudioSource ambientCDSound;
-    public AudioSource ambientSDSound;
-    public AudioSource ambientMDSound;
+    public AudioSource landingSound1;
+    public AudioSource landingSound2;
+    public AudioSource hoverIslandSound;
+    public AudioSource hoverRegionSound;
+    public AudioSource printButtonClickSound;
 
-    private bool ambientPlaying = false;
+    private bool isAmbientPlaying = false;
+    private int randomNumber;
 
     void Update() {
-        if (PlayerPrefs.GetInt("playMapslDropSound") == 1) ambientPlaying = false;
-
         // ambient
-        if (!ambientPlaying) {
-            switch (PlayerPrefs.GetString("island")) {
-                case "":
-                    ambientIDSound.Stop();
-                    ambientCDSound.Stop();
-                    ambientSDSound.Stop();
-                    ambientMDSound.Stop();
-                    ambientOverviewSound.Play();
-                    break;
-                case "Init":
-                    ambientIDSound.Stop();
-                    ambientCDSound.Stop();
-                    ambientSDSound.Stop();
-                    ambientMDSound.Stop();
-                    ambientOverviewSound.Play();
-                    break;
-                case "InteractionIsland":
-                    ambientIDSound.Play();
-                    ambientCDSound.Stop();
-                    ambientSDSound.Stop();
-                    ambientMDSound.Stop();
-                    ambientOverviewSound.Stop();
-                    break;
-                case "CommunicationIsland":
-                    ambientIDSound.Stop();
-                    ambientCDSound.Play();
-                    ambientSDSound.Stop();
-                    ambientMDSound.Stop();
-                    ambientOverviewSound.Stop();
-                    break;
-                case "SoundIsland":
-                    ambientIDSound.Stop();
-                    ambientCDSound.Stop();
-                    ambientSDSound.Play();
-                    ambientMDSound.Stop();
-                    ambientOverviewSound.Stop();
-                    break;
-                case "MediaIsland":
-                    ambientIDSound.Stop();
-                    ambientCDSound.Stop();
-                    ambientSDSound.Stop();
-                    ambientMDSound.Play();
-                    ambientOverviewSound.Stop();
-                    break;
-            }
-            ambientPlaying = true;
+        if (!isAmbientPlaying && PlayerPrefs.GetString("region") == "") {
+            ambientSound.Play();
+            isAmbientPlaying = true;
+        }
+        if (isAmbientPlaying && PlayerPrefs.GetString("region") != "") {
+            ambientSound.Stop();
+            isAmbientPlaying = false;
         }
 
-        // fx
+        // pick up, drop and land fx
         if (PlayerPrefs.GetInt("playMapslPickUpSound") == 1) {
-            pickUpSound.Play();
+            randomNumber = Random.Range(0, 10);
+            if (randomNumber % 3 == 0) pickUpSound1.Play();
+            else pickUpSound2.Play();
             PlayerPrefs.SetInt("playMapslPickUpSound", 0);
         }
         if (PlayerPrefs.GetInt("playMapslDropSound") == 1) {
-            pickUpSound.Play();
+            dropSound.Play();
             PlayerPrefs.SetInt("playMapslDropSound", 0);
         }
-        if (PlayerPrefs.GetInt("playAreaHoverSound") == 1) {
-            pickUpSound.Play();
-            PlayerPrefs.SetInt("playAreaHoverSound", 0);
+        if (PlayerPrefs.GetInt("playMapslLandingSound") == 1) {
+            if (randomNumber % 3 == 0) landingSound1.Play();
+            else landingSound2.Play();
+            PlayerPrefs.SetInt("playMapslLandingSound", 0);
+        }
+
+        // hover fx
+        if (PlayerPrefs.GetInt("playIslandHoverSound") == 1) {
+            hoverIslandSound.Play();
+            PlayerPrefs.SetInt("playIslandHoverSound", 0);
+        }
+        if (PlayerPrefs.GetInt("playRegionHoverSound") == 1) {
+            hoverRegionSound.Play();
+            PlayerPrefs.SetInt("playRegionHoverSound", 0);
+        }
+
+        // button click
+        if (PlayerPrefs.GetInt("playButtonClickSound") == 1) {
+            printButtonClickSound.Play();
+            PlayerPrefs.SetInt("playButtonClickSound", 0);
         }
     }
 }

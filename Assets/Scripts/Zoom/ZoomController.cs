@@ -28,6 +28,7 @@ public class ZoomController : MonoBehaviour
                 } else {
                     mapsl.transform.position = zoomPosition;
                     mainCamera.transform.localPosition = zoomPosition + new Vector3(0, 0, cameraOffset);
+                    PlayerPrefs.SetInt("playMapslLandingSound", 1);
                 }
                 PlayerPrefs.SetInt("zooming", 0);
             }

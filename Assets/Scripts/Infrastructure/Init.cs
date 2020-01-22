@@ -27,6 +27,9 @@ public class Init : MonoBehaviour
         // sound related
         PlayerPrefs.SetInt("playMapslPickUpSound", 0);
         PlayerPrefs.SetInt("playMapslDropSound", 0);
-        PlayerPrefs.SetInt("playAreaHoverSound", 0);
+        PlayerPrefs.SetInt("playMapslLandingSound", 0);
+        PlayerPrefs.SetInt("playIslandHoverSound", 0);
+        PlayerPrefs.SetInt("playRegionHoverSound", 0);
+        PlayerPrefs.SetInt("playButtonClickSound", 0);
     }
 }

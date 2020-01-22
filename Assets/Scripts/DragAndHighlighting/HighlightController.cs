@@ -36,7 +36,8 @@ public class HighlightController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D o) {
         if (o.gameObject.name == "Mapsl" && PlayerPrefs.GetInt("isMapslDragged") == 1) {
             isEntered = true;
-            PlayerPrefs.SetInt("playAreaHoverSound", 1);
+            if (areaType.ToString() == "island") PlayerPrefs.SetInt("playIslandHoverSound", 1);
+            else PlayerPrefs.SetInt("playRegionHoverSound", 1);
         }
     } 
     void OnTriggerExit2D(Collider2D o) {
