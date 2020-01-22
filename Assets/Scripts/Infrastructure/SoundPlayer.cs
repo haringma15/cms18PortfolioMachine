@@ -2,7 +2,8 @@
 
 public class SoundPlayer : MonoBehaviour
 {
-    public AudioSource ambientSound;
+    public AudioSource ambientOverviewSound;
+    public AudioSource ambientIslandSound;
     public AudioSource pickUpSound1;
     public AudioSource pickUpSound2;
     public AudioSource dropSound;
@@ -12,18 +13,27 @@ public class SoundPlayer : MonoBehaviour
     public AudioSource hoverRegionSound;
     public AudioSource printButtonClickSound;
 
-    private bool isAmbientPlaying = false;
+    private bool isAmbientOverviewPlaying = false;
+    private bool isAmbientIslandPlaying = false;
     private int randomNumber;
 
     void Update() {
         // ambient
-        if (!isAmbientPlaying && PlayerPrefs.GetString("region") == "") {
-            ambientSound.Play();
-            isAmbientPlaying = true;
+        if (!isAmbientOverviewPlaying && PlayerPrefs.GetString("island") == "") {
+            ambientOverviewSound.Play();
+            isAmbientOverviewPlaying = true;
         }
-        if (isAmbientPlaying && PlayerPrefs.GetString("region") != "") {
-            ambientSound.Stop();
-            isAmbientPlaying = false;
+        if (isAmbientOverviewPlaying && PlayerPrefs.GetString("island") != "") {
+            ambientOverviewSound.Stop();
+            isAmbientOverviewPlaying = false;
+        }
+        if (!isAmbientIslandPlaying && PlayerPrefs.GetString("island") != "" && PlayerPrefs.GetString("region") == "") {
+            ambientIslandSound.Play();
+            isAmbientIslandPlaying = true;
+        }
+        if (isAmbientIslandPlaying && PlayerPrefs.GetString("region") != "" || isAmbientIslandPlaying && PlayerPrefs.GetString("island") == "" || isAmbientIslandPlaying && PlayerPrefs.GetString("island") == "Init") {
+            ambientIslandSound.Stop();
+            isAmbientIslandPlaying = false;
         }
 
         // pick up, drop and land fx
